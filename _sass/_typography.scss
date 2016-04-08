@@ -29,9 +29,10 @@ h3,
 h4,
 h5,
 h6 {
-	font-weight: bold;
+	font-weight: $font-weight-base;
 	color: $color-headings;
 	text-rendering: optimizeLegibility;
+	text-align: center;
 }
 .title,
 h1 {
@@ -57,11 +58,11 @@ h4 {
 }
 h1 {
 	font-size: $font-size-h1;
-	line-height: 32px;
+	line-height: 3.2rem;
 }
 h2 {
 	font-size: $font-size-h2;
-	line-height: 32px;
+	line-height: 2.6rem;
 }
 h3 {
 	font-size: $font-size-h3;

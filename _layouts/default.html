@@ -4,19 +4,17 @@
   {% include head.html %}
 
   <body>
-      <div class="jc-site-wrapper">
 
-        {% include header.html %}
+      {% include header.html %}
 
-        <div class="jc-page-content jc-gn-push">
-          <div class="wrapper">
-            {{ content }}
-          </div>
+      <div class="jc-page-content">
+        
+        {{ content }}
 
-        {% include footer.html %}
+      {% include footer.html %}
 
-        </div>
       </div>
+
 
       {% include scripts.html %}
 
