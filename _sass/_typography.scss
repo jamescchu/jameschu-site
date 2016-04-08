@@ -5,6 +5,7 @@ html {
 body {
 	font-family: $font-family-base;
 	font-size: $font-size / 10 + 0em;
+	font-weight: $font-weight-base;
 	line-height: $base-line;
 	background: $background-body;
 	color: $color-body;
@@ -98,37 +99,6 @@ address {
 	+ h6 {
 		margin-top: $base-line;
 	}
-}
-
-/* =Line height and margin
------------------------------------------------------------------------------*/
-ul,
-ol,
-ul ul,
-ol ol,
-ul ol,
-ol ul {
-	margin: 0 0 0 $base-line;
-}
-ol ol li {
-	list-style-type: lower-alpha;
-}
-ol ol ol li {
-	list-style-type: lower-roman;
-}
-p,
-ul,
-ol,
-dl,
-blockquote,
-hr,
-pre,
-table,
-fieldset,
-figure,
-address,
-output {
-	margin-bottom: $margin-half;
 }
 
 /* =Lead

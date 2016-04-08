@@ -1,6 +1,7 @@
 // Font
-$font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-base: 'Lato', sans-serif;
 $font-family-code: Menlo, Monaco, Consolas, Courier, monospace;
+$font-weight-base: 100;
 
 // Breakpoints
 $breakpoint-small: 768px;
@@ -19,7 +20,7 @@ $color-link: #256bc9;
 $color-link-hover: #e21e3b;
 
 // Baseline
-$base-line: 24; // 24px by default
+$base-line: 24px; // 24px by default
 $base-line-big: 28px; // 28px by default
 $base-line-small: 20px; // 20px by default
 $base-line-smaller: 16px; // 16px by default
@@ -135,8 +136,10 @@ $color-fieldset-border: rgba(0, 0, 0, .1);
 $fieldset-border-size: 1px;
 
 // Extra Colors
-$color-default: #e5e5e5;
-$color-primary: #2f77d1;
+$color-default: #F2F2F2;
+$color-primary: #4A4A4A;
 $color-success: #0A8754;
 $color-error: #d11149;
 $color-warning: #f4d31e;
+$color-black: #000000;
+$color-white: #FFFFFF;

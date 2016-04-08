@@ -1,0 +1,55 @@
+#jc-header {
+  background-color: $color-black;
+  padding: 1.6rem 0;
+  text-align: center;
+}
+
+#jc-gn-content {
+  background-color: $color-black;
+  text-align: center;
+  position:absolute;
+  width: 100%;
+
+  .jc-gn-item {
+    list-style: none;
+    text-transform: lowercase;
+    padding: 2rem 0;
+
+    .jc-gn-link {
+        color: $color-white;
+        font-size: 2rem;
+        text-decoration: none;
+        height: 10rem;
+    }
+  }
+
+}
+
+.svg-logo {
+  height: 2.8rem;
+  width: 11rem;
+}
+
+.jc-page-content {
+  padding: 30px;
+  background: $color-default;
+  transform: translate3d(0,0,0);
+  transition: transform .3s;
+}
+
+.jc-page-content {
+  &.jc-gn-push {
+    transform: translate3d(0,130px,0);
+  }
+}
+
+.toggle-nav {
+  position:absolute;
+  top:2rem;
+  right: 2rem;
+  cursor: pointer;
+}
+
+.toggle-nav:before {
+  content: 'OPEN';
+}

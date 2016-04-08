@@ -9,6 +9,8 @@ var inject      = require('gulp-inject')
 var imagemin    = require('gulp-imagemin');
 var pngquant    = require('imagemin-pngquant');
 var concat      = require('gulp-concat');
+var rename      = require('gulp-rename');
+var clean       = require('gulp-clean');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -47,7 +49,7 @@ gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
  * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
  */
 gulp.task('sass', function () {
-    return gulp.src('_sass/global.scss')
+    return gulp.src('_sass/combine.scss')
         .pipe(sass({
             includePaths: ['scss'],
             onError: browserSync.notify
@@ -59,13 +61,24 @@ gulp.task('sass', function () {
 });
 
 /**
+ * Compile files from _js into _site
+ */
+gulp.task('js', function () {
+    return gulp.src('js/*.js')
+        .pipe(concat('_site/js/combine.js'))
+        .pipe(gulp.dest('_site/js'))
+        .pipe(browserSync.reload({stream:true}))
+        .pipe(gulp.dest('js'));
+});
+
+/**
  * Inline svg into document
  */
 gulp.task('svgstore', function () {
     var svgs = gulp
         .src('_svg/*.svg')
         .pipe(svgmin())
-        .pip(rename({prefix: 'svg-'}))
+        .pipe(rename({prefix: 'svg-'}))
         .pipe(svgstore({ inlineSvg: true }));
 
     function fileContents (filePath, file) {
@@ -92,6 +105,14 @@ gulp.task('images', function () {
 });
 
 /**
+ * Clean _site folder
+ */
+gulp.task('clean', function () {
+  return gulp.src('_site', {read: false})
+		.pipe(clean());
+});
+
+/**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
  */
@@ -99,6 +120,7 @@ gulp.task('watch', function () {
     gulp.watch('_images/*', ['images']);
     gulp.watch('_svg/*.svg', ['svgstore']);
     gulp.watch('_sass/*.scss', ['sass']);
+    gulp.watch('js/*.js', ['js']);
     gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
@@ -106,4 +128,4 @@ gulp.task('watch', function () {
  * Default task, running just `gulp` will compile the sass,
  * compile the jekyll site, launch BrowserSync & watch files.
  */
-gulp.task('default', ['browser-sync', 'watch']);
+gulp.task('default', ['clean', 'browser-sync', 'watch']);

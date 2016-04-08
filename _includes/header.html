@@ -1,13 +1,16 @@
-<header class="jc-header">
+{% include svg.html %}
 
-    <nav class="jc-gn-content">
-
-      <ul class="jc-gn-list">
-        {% for item in site.data.nav_items %}
-          <li class="jc-gn-item"><a class="jc-gn-link" href="{{ item.url }}">{{ item.link }}</a></li>
-        {% endfor %}
-      </ul>
-
-    </nav>
-
+<header id="jc-header">
+    <a href="/"><svg class="svg-logo"><use xlink:href="#svg-logo"></use></svg></a>
+    <a class='toggle-nav right'></a>
 </header>
+
+<nav id="jc-gn-content">
+
+  <ul class="jc-gn-list">
+    {% for item in site.data.nav_items %}
+      <li class="jc-gn-item"><a class="jc-gn-link" href="{{ item.url }}">{{ item.link }}</a></li>
+    {% endfor %}
+  </ul>
+
+</nav>

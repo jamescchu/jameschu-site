@@ -17,7 +17,7 @@ twitter_username: jamescchu_
 github_username:  jamescchu
 
 exclude: [node_modules, gulpfile.js, package.json]
-include: [_images]
+include: [images]
 
 # Build settings
 markdown: kramdown
