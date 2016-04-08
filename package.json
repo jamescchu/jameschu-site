@@ -1,0 +1,25 @@
+{
+  "name": "james-chu",
+  "version": "0.0.1",
+  "description": "james-chu powered by jekyll",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "imagemin-pngquant": "^4.2.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.11.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-inject": "^4.0.0",
+    "gulp-sass": "^2.2.0",
+    "gulp-svgmin": "^1.2.2",
+    "gulp-svgstore": "^6.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Chu",
+  "license": "ISC"
+}

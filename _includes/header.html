@@ -1,0 +1,13 @@
+<header class="jc-header">
+
+    <nav class="jc-gn-content">
+
+      <ul class="jc-gn-list">
+        {% for item in site.data.nav_items %}
+          <li class="jc-gn-item"><a class="jc-gn-link" href="{{ item.url }}">{{ item.link }}</a></li>
+        {% endfor %}
+      </ul>
+
+    </nav>
+
+</header>
