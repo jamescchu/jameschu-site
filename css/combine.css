@@ -159,7 +159,7 @@ svg {
   background-repeat: no-repeat; }
 
 :root {
-  background-color: #ffffff;
+  background-color: black;
   box-sizing: border-box;
   color: #000000;
   cursor: default;
@@ -249,35 +249,46 @@ textarea {
 /**
  * Apply to any column to make it the last one of the current row.
  */
-html {
+html, body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   font-size: 62.5%;
-  text-align: center; }
+  text-align: center;
+  color: #4A4A4A; }
 
 h1 {
-  font-size: 2.2em;
-  font-weight: 100; }
+  font-weight: 100;
+  font-size: 1.7rem;
+  line-height: 2.2rem; }
 
-#main-nav {
+h2 {
+  font-weight: 100;
+  font-size: 1.1rem;
+  line-height: 1.5rem; }
+
+.copyright {
+  font-size: 0.8rem;
+  color: #4A4A4A; }
+
+.main-nav {
   background-color: black;
   height: 3rem;
   z-index: 1; }
-  #main-nav a {
+  .main-nav a {
     padding: 0.87rem 0; }
-    #main-nav a .svg-logo {
+    .main-nav a .svg-logo {
       height: 1.7rem;
       width: 7.3rem;
       margin: 0.5rem; }
-  #main-nav .nav-lists {
+  .main-nav .nav-lists {
     background-color: black;
     position: absolute;
     top: 3rem;
     width: 100%;
     height: 7.3rem;
     z-index: 0; }
-    #main-nav .nav-lists .svg-nav-about,
-    #main-nav .nav-lists .svg-nav-work {
+    .main-nav .nav-lists .svg-nav-about,
+    .main-nav .nav-lists .svg-nav-work {
       height: 1.2rem;
       margin: 1rem 0; }
 
@@ -290,8 +301,8 @@ h1 {
 
 label[for="nav-trigger"] {
   position: fixed;
-  top: 0px;
-  right: 0px;
+  top: 0;
+  right: 0;
   z-index: 2;
   margin-left: -1.5rem;
   width: 3rem;
@@ -300,13 +311,42 @@ label[for="nav-trigger"] {
   background: red; }
 
 .page-content {
-  min-height: 100%;
-  min-width: 100%;
-  background-color: #fff;
+  background-color: white;
   position: relative;
   top: 0;
   bottom: 100%;
   left: 0;
   z-index: 1;
-  padding: 4em;
   transition: top 0.2s; }
+
+.main-footer {
+  background-color: black;
+  height: 2rem; }
+  .main-footer .footer-content {
+    padding: 0.4rem 0; }
+
+.hero-section {
+  background-color: #F2F2F2;
+  width: 100%;
+  margin: 0 0%;
+  overflow: hidden;
+  *zoom: 1;
+  padding: 5rem 0; }
+  .hero-section .hero-content {
+    float: left;
+    margin-right: -100%;
+    width: 83.17%;
+    margin-left: 8.42%; }
+
+.recent-section {
+  background-color: white;
+  width: 100%;
+  margin: 0 0%;
+  overflow: hidden;
+  *zoom: 1; }
+  .recent-section .recent-content {
+    float: left;
+    margin-right: -100%;
+    width: 100%; }
+  .recent-section .recent-items {
+    width: 100%; }

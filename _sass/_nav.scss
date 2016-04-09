@@ -1,4 +1,4 @@
-#main-nav {
+.main-nav {
   background-color: black;
   height: 3rem;
   z-index: 1;
@@ -37,8 +37,8 @@
 
 label[for="nav-trigger"] {
     position: fixed;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     z-index: 2;
     margin-left: -1.5rem;
     width: 3rem;

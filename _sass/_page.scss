@@ -1,12 +1,40 @@
 .page-content {
-  min-height: 100%;
-  min-width: 100%;
-  background-color: #fff;
+  background-color: white;
   position: relative;
   top: 0;
   bottom: 100%;
   left: 0;
   z-index: 1;
-  padding: 4em;
   transition: top 0.2s;
+}
+
+.main-footer {
+  background-color: black;
+  height: 2rem;
+  .footer-content {
+    padding: 0.4rem 0;
+  }
+}
+
+.hero-section {
+  background-color: $light-gray;
+  @include container();
+  @include clearfix();
+  padding: 5rem 0;
+  .hero-content {
+    @include column(10);
+    @include push(1);
+  }
+}
+
+.recent-section {
+  background-color: white;
+  @include container();
+  @include clearfix();
+  .recent-content {
+    @include column(12);
+  }
+  .recent-items {
+    width: 100%;
+  }
 }

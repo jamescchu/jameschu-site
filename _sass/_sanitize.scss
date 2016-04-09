@@ -242,7 +242,7 @@ svg {
 // specify the root styles of the document
 
 :root {
-	background-color: if(variable-exists(root-background-color), $root-background-color, #ffffff);
+	background-color: if(variable-exists(root-background-color), $root-background-color, black);
 	box-sizing: if(variable-exists(root-box-sizing), $root-box-sizing, border-box);
 	color: if(variable-exists(root-color), $root-color, #000000);
 	cursor: if(variable-exists(root-cursor), $root-cursor, default);
