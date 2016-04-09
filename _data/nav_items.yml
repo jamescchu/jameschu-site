@@ -1,7 +1,7 @@
 - link: Work
   svg: svg-nav-work
-  url: /work
+  url: work
 
 - link: About
   svg: svg-nav-about
-  url: /about
+  url: about

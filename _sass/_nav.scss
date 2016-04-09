@@ -21,6 +21,7 @@
     .svg-nav-about,
     .svg-nav-work {
       height: 1.2rem;
+      width: 100%;
       margin: 1rem 0;
     }
   }
@@ -36,7 +37,7 @@
 }
 
 label[for="nav-trigger"] {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     z-index: 2;

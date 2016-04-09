@@ -290,6 +290,7 @@ h2 {
     .main-nav .nav-lists .svg-nav-about,
     .main-nav .nav-lists .svg-nav-work {
       height: 1.2rem;
+      width: 100%;
       margin: 1rem 0; }
 
 .nav-trigger {
@@ -300,7 +301,7 @@ h2 {
     transition: top ease-out 0.3s; }
 
 label[for="nav-trigger"] {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   z-index: 2;
@@ -313,6 +314,7 @@ label[for="nav-trigger"] {
 .page-content {
   background-color: white;
   position: relative;
+  min-height: 8rem;
   top: 0;
   bottom: 100%;
   left: 0;
