@@ -1,164 +1,202 @@
-/* =Grid
------------------------------------------------------------------------------*/
-row {
+$total_columns: 	12;
+$total_width:		75rem;
+$gutter_width:		1%;
+$container_margin:	1%;
 
-	@include row;
+$class_container:	'row';
+$class_column:		'col';
+$class_push:		'push';
 
-	margin-bottom: $base-line;
+@function element_width($column_index){
+	@if ($total_width == 100%){
+	  	$not_rounded_value: (((100% + $gutter_width)/$total_columns)*$column_index)-$gutter_width;
+	    $not_rounded_value: $not_rounded_value * 100;
+	    $rounded_value: round($not_rounded_value)/100;
+	    @return $rounded_value;
+	}@else{
+		@return ((($total_width + $gutter_width)/$total_columns)*$column_index)-$gutter_width;
+	}
+}
 
-	& column {
+@function column_width(){
+	@if ($total_width == 100%){
+	  	$not_rounded_value: (((100% + $gutter_width)/$total_columns))-$gutter_width;
+	    $not_rounded_value: $not_rounded_value * 100;
+	    $rounded_value: round($not_rounded_value)/100;
+	    @return $rounded_value * 1%;
+	}@else{
+		@return ($total_width - ($gutter_width*($total_columns - 1)))/$total_columns;
+	}
+}
 
-		margin: 0;
-		padding: 0;
-		margin-right: $grid-gutter;
+@function container_width(){
+	@if ($total_width == 100%){
+		@if ($container_margin == auto){
+			@return 100%;
+		}
+		@return 100% - 2*$container_margin;
+	} @else {
+		@return $total_width;
+	}
+}
+////////////////////////////////////////////////////////////////////////////////
+// BASIC MIXINS
+////////////////////////////////////////////////////////////////////////////////
 
-		&:last-child {
-			margin-right: 0;
+/**
+ * Clearfix
+ */
+@mixin clearfix(){
+	overflow: hidden;
+	*zoom: 1;
+}
+
+/**
+ * Legacy Clearfix
+ */
+@mixin legacy-pie-clearfix(){
+	*zoom: 1;
+
+	:after {
+	  content: "\0020";
+	  display: block;
+	  height: 0;
+	  clear: both;
+	  overflow: hidden;
+	  visibility: hidden;
+	}
+}
+
+/**
+ * Establish the grid-containing element.
+ */
+@mixin container(){
+	width: container_width();
+	margin: 0 $container_margin;
+}
+
+/**
+ * Align an element to the grid.
+ */
+@mixin column($_columns_width, $_padding_columns:null){
+	float: left;
+	margin-right: -100%;
+	$_width_perc: element_width($_columns_width);
+    width: $_width_perc;
+
+    @if($_padding_columns != null){
+    	@include push($_padding_columns);
+    }
+}
+
+/**
+ * Apply to any column to make it the last one of the current row.
+ */
+@mixin column_omega(){
+
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// MARGIN MIXINS
+////////////////////////////////////////////////////////////////////////////////
+
+@mixin pre(){}
+@mixin post(){}
+@mixin squish(){}
+
+@mixin push($_column_index){
+	$_width_perc: 0;
+	@if ($total_width == 100%){
+		$_width_perc: ($gutter_width + element_width($_column_index));
+	}@else{
+		//$_width_perc: (column_width() + $gutter_width)*$_column_index;
+		$_width_perc: ($gutter_width + element_width($_column_index));
+	}
+
+	margin-left: $_width_perc;
+}
+
+@mixin pull(){}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// HELPER CLASSES
+////////////////////////////////////////////////////////////////////////////////
+
+@mixin generate_helper_classes(){
+
+	/* Helper Class: Container */
+	.#{$class_container}{
+		@include container();
+	}
+
+	/* Helper Class: Columns */
+	@for $i from 1 through $total_columns{
+		.#{$class_column}#{$i} {
+			@include column($i)
 		}
 	}
-	&[end] {
-		margin-bottom: 0;
-	}
-	&[split] {
-		column {
-			margin-right: 0;
+
+	/* Helper Class: Horizontal Position */
+	@for $i from 0 through ($total_columns - 1){
+		.#{$class_push}#{$i} {
+			@include push($i);
 		}
-	}
-	&[centered] {
-		-webkit-justify-content: center;
-		-ms-flex-pack: center;
-		justify-content: center;
-	}
-	&[around] {
-		-webkit-justify-content: space-around;
-		-ms-flex-pack: distribute;
-		justify-content: space-around;
-	}
-	&[between] {
-		-webkit-justify-content: space-between;
-		-ms-flex-pack: justify;
-		justify-content: space-between;
 	}
 
 }
 
-column {
-	&[cols="1"] {
-		@include col(1);
-	}
-	&[cols="2"] {
-		@include col(2);
-	}
-	&[cols="3"] {
-		@include col(3);
-	}
-	&[cols="4"] {
-		@include col(4);
-	}
-	&[cols="5"] {
-		@include col(5);
-	}
-	&[cols="6"] {
-		@include col(6);
-	}
-	&[cols="7"] {
-		@include col(7);
-	}
-	&[cols="8"] {
-		@include col(8);
-	}
-	&[cols="9"] {
-		@include col(9);
-	}
-	&[cols="10"] {
-		@include col(10);
-	}
-	&[cols="11"] {
-		@include col(11);
-	}
-	&[cols="12"] {
-		width: 100%;
-	}
-	&[offset="1"] {
-		@include offset(1);
-	}
-	&[offset="2"] {
-		@include offset(2);
-	}
-	&[offset="3"] {
-		@include offset(3);
-	}
-	&[offset="4"] {
-		@include offset(4);
-	}
-	&[offset="5"] {
-		@include offset(5);
-	}
-	&[offset="6"] {
-		@include offset(6);
-	}
-	&[offset="7"] {
-		@include offset(7);
-	}
-	&[offset="8"] {
-		@include offset(8);
-	}
-	&[offset="9"] {
-		@include offset(9);
-	}
-	&[offset="10"] {
-		@include offset(10);
-	}
-	&[offset="11"] {
-		@include offset(11);
+@mixin generate_grid_positions($_column_selector, $_element_width){
+
+	$_cols_per_row: floor($total_columns / $_element_width);
+
+	// create rule for each element
+	@for $i from 1 through $_cols_per_row{
+
+		#{$_column_selector}:nth-child(#{$_cols_per_row}n+#{$i}){
+			@include push((($i - 1)*$_element_width));
+			margin-bottom: $gutter_width;
+
+			@if ($i == 1) {
+				clear: both;
+				@include clearfix();
+			}@else{
+				clear: none;
+			}
+		}
 	}
 }
 
-.width-1 { @include col(1); }
-.width-2 { @include col(2); }
-.width-3 { @include col(3);; }
-.width-4 { @include col(4); }
-.width-5 { @include col(5); }
-.width-6 { @include col(6); }
-.width-7 { @include col(7); }
-.width-8 { @include col(8); }
-.width-9 { @include col(9); }
-.width-10 { @include col(10); }
-.width-11 { @include col(11); }
-.width-12 { width: 100%; }
+@mixin generate_grid_positions_legacy($_column_selector, $_element_width, $_elements_in_grid:$total_columns){
 
+	$_cols_per_row: floor($total_columns / $_element_width);
+	$_current_col:1;
 
-@media (max-width: $breakpoint-small) {
+	// create rule for each element
+	@for $i from 1 through $_elements_in_grid{
 
-	row {
-
-		margin-bottom: 0;
-
-		& [offset] {
-			margin-left: 0;
-		}
-		& column[cols] {
-			margin-right: 0;
-			width: 100%;
-			margin-bottom: $base-line;
+		$selector: #{$_column_selector};
+		@for $ii from 2 through $i{
+			$selector: #{$selector}+#{$_column_selector};
 		}
 
-		& row column:last-child {
-			margin-bottom: 0;
-		}
 
+		#{$selector}{
+			@include push((($_current_col - 1)*$_element_width));
+			margin-bottom: $gutter_width;
+
+			@if ($_current_col == 1) {
+				clear: both;
+				@include legacy-pie-clearfix();
+			}@else{
+				clear: none;
+			}
+
+			$_current_col: $_current_col + 1;
+			@if ($_current_col > $_cols_per_row){
+				$_current_col:1;
+			}
+		}
 	}
-
-	.width-1,
-	.width-2,
-	.width-3,
-	.width-4,
-	.width-5,
-	.width-6,
-	.width-7,
-	.width-8,
-	.width-9,
-	.width-10,
-	.width-11,
-	.width-12 { width: 100%; }
 }

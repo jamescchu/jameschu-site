@@ -1,14 +1,26 @@
 {% include svg.html %}
-<header id="jc-gh">
-    <a href="/"><svg class="svg-logo"><use xlink:href="#svg-logo"></use></svg></a>
-    <a class='toggle-nav'></a>
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<header id="main-header">
+  <nav id="main-nav" role="navigation">
+    <ul class="nav-header">
+        <li><a href="/">
+            <svg class="svg-logo">
+              <use xlink:href="#svg-logo"></use>
+            </svg></a>
+        </li>
+        <li>
+          <label for="nav-trigger"></label>
+        </li>
+    </ul>
+
+    <ul class="nav-lists">
+      {% for item in site.data.nav_items %}
+        <li><a href="{{ item.url }}">
+          <svg class="{{ item.svg }}">
+            <use xlink:href="#{{ item.svg }}"></use>
+          </svg></a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
 </header>
-<nav id="jc-gn-content">
-
-  <ul class="jc-gn-list">
-    {% for item in site.data.nav_items %}
-      <li class="jc-gn-item"><a class="jc-gn-link" href="{{ item.url }}">{{ item.link }}</a></li>
-    {% endfor %}
-  </ul>
-
-</nav>

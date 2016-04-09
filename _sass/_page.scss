@@ -1,0 +1,12 @@
+.page-content {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: #fff;
+  position: relative;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  z-index: 1;
+  padding: 4em;
+  transition: top 0.2s;
+}

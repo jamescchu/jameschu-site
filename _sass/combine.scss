@@ -1,28 +1,6 @@
-@import 'variables';
-@import 'mixins';
-
-// Base
-@import 'reset';
-@import 'typography';
-
+@import 'sanitize';
 @import 'grid';
-@import 'blocks';
 
-@import 'tables';
-@import 'forms';
-
-@import 'buttons';
-@import 'labels';
-
-@import 'messages';
-@import 'alerts';
-
-// Navigation
-@import 'breadcrumbs';
-@import 'pagination';
-
-// Helpers
-@import 'helpers';
-
-// Layout
-@import 'layout';
+@import 'type';
+@import 'nav';
+@import 'page';

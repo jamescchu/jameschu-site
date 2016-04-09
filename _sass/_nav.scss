@@ -1,0 +1,48 @@
+#main-nav {
+  background-color: black;
+  height: 3rem;
+  z-index: 1;
+  a {
+    padding: 0.87rem 0;
+    .svg-logo {
+      height: 1.7rem;
+      width: 7.3rem;
+      margin: 0.5rem;
+    }
+  }
+  .nav-lists{
+    background-color: black;
+    position: absolute;
+    top: 3rem;
+    width: 100%;
+    height: 7.3rem;
+    z-index: 0;
+
+    .svg-nav-about,
+    .svg-nav-work {
+      height: 1.2rem;
+      margin: 1rem 0;
+    }
+  }
+}
+
+.nav-trigger {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  &:checked ~ .page-content {
+    top: 7.3rem;
+    transition: top ease-out 0.3s;
+  }
+}
+
+label[for="nav-trigger"] {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 2;
+    margin-left: -1.5rem;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    background: red;
+}
