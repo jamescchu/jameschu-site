@@ -66,6 +66,7 @@ gulp.task('sass', function () {
 gulp.task('js', function () {
     return gulp.src('js/*.js')
         .pipe(concat('combine.js'))
+        .pipe(gulp.dest('_site/js'))
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('js'));
 });
@@ -108,7 +109,7 @@ gulp.task('images', function () {
  */
 gulp.task('clean', function () {
   return gulp.src('_site', {read: false})
-		.pipe(clean());
+		.pipe(clean({force: true}));
 });
 
 /**

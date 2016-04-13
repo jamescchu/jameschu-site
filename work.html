@@ -6,14 +6,13 @@ permalink: /work/
 
 <div class="subnav-header">
   <div class="subnav-content">
-    <ul>
       {% for item in site.data.work_items %}
-        <li class="subnav-item"><a href="#" data-filter="{{ item.filter }}">
-          {{ item.cat }}
+        <div class="subnav-item">
+          <a href="#" data-filter="{{ item.filter }}">
+            {{ item.cat }}
           </a>
-        </li>
+        </div>
       {% endfor %}
-    </ul>
   </div>
 </div>
 

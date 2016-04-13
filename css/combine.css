@@ -333,17 +333,23 @@ label[for="nav-trigger"] {
 .subnav-header {
   height: 2.5rem; }
   .subnav-header .subnav-content {
-    padding: 0.3rem; }
-    .subnav-header .subnav-content .subnav-item {
-      display: inline;
-      text-transform: lowercase;
-      font-size: 1.2rem;
-      color: #4A4A4A; }
-      .subnav-header .subnav-content .subnav-item a:link a:visited {
-        color: #4A4A4A; }
-      .subnav-header .subnav-content .subnav-item a:hover {
-        color: #4A4A4A;
-        opacity: 60%; }
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 1rem;
+    height: 100%;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .subnav-header .subnav-item, .subnav-header a:link, .subnav-header a:visited {
+    text-transform: lowercase;
+    font-size: 1.2rem;
+    color: #4A4A4A; }
+    .subnav-header .subnav-item a:hover, .subnav-header .subnav-item a:active, .subnav-header a:link a:hover, .subnav-header a:link a:active, .subnav-header a:visited a:hover, .subnav-header a:visited a:active {
+      opacity: 60%; }
 
 .page-content {
   background-color: white;
