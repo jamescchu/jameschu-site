@@ -298,7 +298,9 @@ textarea {
   margin: 0.5rem 0;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  border: 1px solid #4A4A4A; }
+  border: 1px solid #4A4A4A;
+  border-radius: 0;
+  -webkit-appearance: none; }
 
 .contact-submit {
   background: #292929;
@@ -431,7 +433,7 @@ label[for="nav-trigger"] {
     margin-right: -100%;
     width: 83.17%;
     margin-left: 8.42%;
-    padding: 3rem 0; }
+    padding: 3.5rem 0; }
     .section .section-content .section-contact {
       padding: 2rem 0; }
 
