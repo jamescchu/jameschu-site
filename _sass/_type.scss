@@ -18,6 +18,25 @@ h2 {
   line-height: 1.5rem;
 }
 
+h3 {
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+p {
+  font-weight: 100;
+  font-size: 1rem;
+  line-height: 1.3rem;
+}
+
+a:link a:visited {
+  color: $primary;
+}
+a:hover {
+  opacity: 60%;
+}
+
 .copyright {
   font-size: 0.8rem;
   color: $primary;

@@ -2,12 +2,15 @@
   background-color: black;
   height: 3rem;
   z-index: 1;
+  .nav-header, .nav-header-content {
+    height:100%;
+  }
   a {
-    padding: 0.87rem 0;
+    padding: 1.18rem 0;
     .svg-logo {
       height: 1.7rem;
-      width: 7.3rem;
-      margin: 0.5rem;
+      width: 7.4rem;
+      margin: 0.65rem;
     }
   }
   .nav-lists{
@@ -29,6 +32,7 @@
 
 .nav-trigger {
   position: absolute;
+  display: none;
   clip: rect(0, 0, 0, 0);
   &:checked ~ .page-content {
     top: 7.3rem;
@@ -46,4 +50,24 @@ label[for="nav-trigger"] {
     height: 3rem;
     cursor: pointer;
     background: red;
+}
+
+.subnav-header {
+  height: 2.5rem;
+  .subnav-content {
+    padding: 0.3rem;
+    .subnav-item {
+      display: inline;
+      text-transform: lowercase;
+      font-size: 1.2rem;
+      color: $primary;
+      a:link a:visited {
+        color: $primary;
+      }
+      a:hover {
+        color: $primary;
+        opacity: 60%;
+      }
+    }
+  }
 }

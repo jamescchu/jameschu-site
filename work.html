@@ -1,0 +1,41 @@
+---
+layout: default
+title: Work
+permalink: /work/
+---
+
+<div class="subnav-header">
+  <div class="subnav-content">
+    <ul>
+      {% for item in site.data.work_items %}
+        <li class="subnav-item"><a href="#" data-filter="{{ item.filter }}">
+          {{ item.cat }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div class="work-grid">
+  <div class="work-content">
+    <div class="work-item brand">
+      <a href="#"><img alt="640x360" src="http://placehold.it/640x360"></a>
+    </div>
+    <div class="work-item typography">
+      <a href="#"><img alt="640x360" src="http://placehold.it/640x360"></a>
+    </div>
+    <div class="work-item brand">
+      <a href="#"><img alt="640x360" src="http://placehold.it/640x360"></a>
+    </div>
+    <div class="work-item typography">
+      <a href="#"><img alt="640x360" src="http://placehold.it/640x360"></a>
+    </div>
+    <div class="work-item interaction">
+      <a href="#"><img alt="640x360" src="http://placehold.it/640x360"></a>
+    </div>
+    <div class="work-item interaction">
+      <a href="#"><img alt="640x360" src="http://placehold.it/640x360"></a>
+    </div>
+  </div>
+</div>

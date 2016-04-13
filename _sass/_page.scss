@@ -39,3 +39,34 @@
     width: 100%;
   }
 }
+
+.section {
+  background-color: white;
+  @include container();
+  @include clearfix();
+  .hero-image {
+    width: 100%;
+  }
+  .section-content {
+    @include column(10);
+    @include push(1);
+    padding: 5rem 0;
+    .section-contact {
+      padding: 2rem 0;
+    }
+  }
+}
+
+.work-grid {
+  @include container();
+  @include clearfix();
+  .work-content {
+    @include column(12);
+  }
+  .work-item {
+    @include column(12);
+    img {
+      width: 100%;
+    }
+  }
+}

@@ -266,6 +266,22 @@ h2 {
   font-size: 1.1rem;
   line-height: 1.5rem; }
 
+h3 {
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.5rem; }
+
+p {
+  font-weight: 100;
+  font-size: 1rem;
+  line-height: 1.3rem; }
+
+a:link a:visited {
+  color: #4A4A4A; }
+
+a:hover {
+  opacity: 60%; }
+
 .copyright {
   font-size: 0.8rem;
   color: #4A4A4A; }
@@ -274,12 +290,14 @@ h2 {
   background-color: black;
   height: 3rem;
   z-index: 1; }
+  .main-nav .nav-header, .main-nav .nav-header-content {
+    height: 100%; }
   .main-nav a {
-    padding: 0.87rem 0; }
+    padding: 1.18rem 0; }
     .main-nav a .svg-logo {
       height: 1.7rem;
-      width: 7.3rem;
-      margin: 0.5rem; }
+      width: 7.4rem;
+      margin: 0.65rem; }
   .main-nav .nav-lists {
     background-color: black;
     position: absolute;
@@ -295,6 +313,7 @@ h2 {
 
 .nav-trigger {
   position: absolute;
+  display: none;
   clip: rect(0, 0, 0, 0); }
   .nav-trigger:checked ~ .page-content {
     top: 7.3rem;
@@ -310,6 +329,21 @@ label[for="nav-trigger"] {
   height: 3rem;
   cursor: pointer;
   background: red; }
+
+.subnav-header {
+  height: 2.5rem; }
+  .subnav-header .subnav-content {
+    padding: 0.3rem; }
+    .subnav-header .subnav-content .subnav-item {
+      display: inline;
+      text-transform: lowercase;
+      font-size: 1.2rem;
+      color: #4A4A4A; }
+      .subnav-header .subnav-content .subnav-item a:link a:visited {
+        color: #4A4A4A; }
+      .subnav-header .subnav-content .subnav-item a:hover {
+        color: #4A4A4A;
+        opacity: 60%; }
 
 .page-content {
   background-color: white;
@@ -352,3 +386,36 @@ label[for="nav-trigger"] {
     width: 100%; }
   .recent-section .recent-items {
     width: 100%; }
+
+.section {
+  background-color: white;
+  width: 100%;
+  margin: 0 0%;
+  overflow: hidden;
+  *zoom: 1; }
+  .section .hero-image {
+    width: 100%; }
+  .section .section-content {
+    float: left;
+    margin-right: -100%;
+    width: 83.17%;
+    margin-left: 8.42%;
+    padding: 5rem 0; }
+    .section .section-content .section-contact {
+      padding: 2rem 0; }
+
+.work-grid {
+  width: 100%;
+  margin: 0 0%;
+  overflow: hidden;
+  *zoom: 1; }
+  .work-grid .work-content {
+    float: left;
+    margin-right: -100%;
+    width: 100%; }
+  .work-grid .work-item {
+    float: left;
+    margin-right: -100%;
+    width: 100%; }
+    .work-grid .work-item img {
+      width: 100%; }

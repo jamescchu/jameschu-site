@@ -3,7 +3,7 @@
 <header class="main-header">
   <nav class="main-nav">
     <ul class="nav-header">
-        <li><a href="{{ relurl }}">
+        <li class="nav-header-content"><a href="{{ relurl }}">
             <svg class="svg-logo">
               <use xlink:href="#svg-logo"></use>
             </svg></a>
@@ -15,7 +15,7 @@
 
     <ul class="nav-lists">
       {% for item in site.data.nav_items %}
-        <li><a href="{{ relurl }}{{ item.url }}">
+        <li  class="nav-lists-content"><a href="{{ relurl }}{{ item.url }}">
           <svg class="{{ item.svg }}">
             <use xlink:href="#{{ item.svg }}"></use>
           </svg></a>
