@@ -10,7 +10,7 @@
 }
 
 .main-footer {
-  background-color: black;
+  background-color: $black;
   height: 2rem;
   .footer-content {
     padding: 0.4rem 0;
@@ -50,7 +50,7 @@
   .section-content {
     @include column(10);
     @include push(1);
-    padding: 5rem 0;
+    padding: 3rem 0;
     .section-contact {
       padding: 2rem 0;
     }

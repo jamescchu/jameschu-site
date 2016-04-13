@@ -1,5 +1,5 @@
 .main-nav {
-  background-color: black;
+  background-color: $black;
   height: 3rem;
   z-index: 1;
   .nav-header, .nav-header-content {
@@ -14,7 +14,7 @@
     }
   }
   .nav-lists{
-    background-color: black;
+    background-color: $black;
     position: absolute;
     top: 3rem;
     width: 100%;
