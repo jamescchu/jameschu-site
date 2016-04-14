@@ -4,19 +4,19 @@ title: Work
 permalink: /work/
 ---
 
-<div class="subnav-header">
+<nav class="subnav-header">
   <div class="subnav-content">
       {% for item in site.data.work_items %}
         <div class="subnav-item">
-          <a href="#" data-filter="{{ item.filter }}">
+          <a href="#" class="subnav-btn" data-filter="{{ item.filter }}">
             {{ item.cat }}
           </a>
         </div>
       {% endfor %}
   </div>
-</div>
+</nav>
 
-<div class="work-grid">
+<div id="work-grid">
   <div class="work-content">
     <div class="work-item brand">
       <a href="#"><img alt="640x360" src="http://placehold.it/640x360"></a>

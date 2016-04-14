@@ -1,5 +1,5 @@
 - cat: All
-  filter: 
+  filter: all
 
 - cat: Brand
   filter: .brand

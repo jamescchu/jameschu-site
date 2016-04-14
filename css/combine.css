@@ -296,7 +296,7 @@ input[type=text] {
 textarea {
   height: 8rem;
   margin: 0.5rem 0;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.93rem;
   font-size: 1rem;
   border: 1px solid #4A4A4A;
   border-radius: 0;
@@ -437,18 +437,8 @@ label[for="nav-trigger"] {
     .section .section-content .section-contact {
       padding: 2rem 0; }
 
-.work-grid {
-  width: 100%;
-  margin: 0 0%;
-  overflow: hidden;
-  *zoom: 1; }
-  .work-grid .work-content {
-    float: left;
-    margin-right: -100%;
+#work-grid .work-item {
+  margin: 0;
+  display: none; }
+  #work-grid .work-item img {
     width: 100%; }
-  .work-grid .work-item {
-    float: left;
-    margin-right: -100%;
-    width: 100%; }
-    .work-grid .work-item img {
-      width: 100%; }

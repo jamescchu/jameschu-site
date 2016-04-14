@@ -57,14 +57,12 @@
   }
 }
 
-.work-grid {
-  @include container();
-  @include clearfix();
+#work-grid {
   .work-content {
-    @include column(12);
   }
   .work-item {
-    @include column(12);
+    margin: 0;
+    display: none;
     img {
       width: 100%;
     }
