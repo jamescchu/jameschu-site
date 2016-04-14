@@ -12,6 +12,7 @@
 .main-footer {
   background-color: $black;
   height: 2rem;
+  z-index: 10;
   .footer-content {
     padding: 0.4rem 0;
   }

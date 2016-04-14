@@ -390,7 +390,8 @@ label[for="nav-trigger"] {
 
 .main-footer {
   background-color: #292929;
-  height: 2rem; }
+  height: 2rem;
+  z-index: 10; }
   .main-footer .footer-content {
     padding: 0.4rem 0; }
 
