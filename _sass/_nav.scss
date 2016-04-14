@@ -34,7 +34,7 @@
   position: absolute;
   display: none;
   clip: rect(0, 0, 0, 0);
-  &:checked ~ .page-content {
+  &:checked ~ .page-wrapper {
     top: 7.3rem;
     transition: top ease-out 0.3s;
   }

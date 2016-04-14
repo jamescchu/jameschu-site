@@ -342,7 +342,7 @@ textarea {
   position: absolute;
   display: none;
   clip: rect(0, 0, 0, 0); }
-  .nav-trigger:checked ~ .page-content {
+  .nav-trigger:checked ~ .page-wrapper {
     top: 7.3rem;
     transition: top ease-out 0.3s; }
 
@@ -378,62 +378,58 @@ label[for="nav-trigger"] {
     .subnav-header .subnav-item a:hover, .subnav-header .subnav-item a:active, .subnav-header a:link a:hover, .subnav-header a:link a:active, .subnav-header a:visited a:hover, .subnav-header a:visited a:active {
       opacity: 60%; }
 
-.page-content {
-  background-color: white;
+.page-wrapper {
+  background-color: #292929;
   position: relative;
-  min-height: 8rem;
   top: 0;
   bottom: 100%;
   left: 0;
   z-index: 1;
   transition: top 0.2s; }
 
+.page-content {
+  background-color: white;
+  min-height: 8rem; }
+
 .main-footer {
   background-color: #292929;
-  height: 2rem;
-  z-index: 10; }
+  height: 2rem; }
   .main-footer .footer-content {
     padding: 0.4rem 0; }
 
 .hero-section {
   background-color: #F2F2F2;
-  width: 100%;
-  margin: 0 0%;
-  overflow: hidden;
-  *zoom: 1;
   padding: 5rem 0; }
+  .hero-section .hero-container {
+    width: 96%;
+    margin: 0 2%;
+    overflow: hidden;
+    *zoom: 1; }
   .hero-section .hero-content {
     float: left;
     margin-right: -100%;
-    width: 83.17%;
-    margin-left: 8.42%; }
+    width: 83.33%;
+    margin-left: 8.33%; }
 
 .recent-section {
-  background-color: white;
-  width: 100%;
-  margin: 0 0%;
-  overflow: hidden;
-  *zoom: 1; }
-  .recent-section .recent-content {
-    float: left;
-    margin-right: -100%;
-    width: 100%; }
+  background-color: white; }
   .recent-section .recent-items {
     width: 100%; }
 
 .section {
-  background-color: white;
-  width: 100%;
-  margin: 0 0%;
-  overflow: hidden;
-  *zoom: 1; }
+  background-color: white; }
+  .section .section-container {
+    width: 96%;
+    margin: 0 2%;
+    overflow: hidden;
+    *zoom: 1; }
   .section .hero-image {
     width: 100%; }
   .section .section-content {
     float: left;
     margin-right: -100%;
-    width: 83.17%;
-    margin-left: 8.42%;
+    width: 83.33%;
+    margin-left: 8.33%;
     padding: 3.5rem 0; }
     .section .section-content .section-contact {
       padding: 2rem 0; }
