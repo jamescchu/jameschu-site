@@ -92,16 +92,29 @@ gulp.task('svgstore', function () {
 });
 
 /**
- * Minify images
+ * Move thumbnails
  */
-gulp.task('images', function () {
-  return gulp.src('_images/*')
+gulp.task('thumbs', function () {
+  return gulp.src('_src/thumbnail-assets/*.png')
       .pipe(imagemin({
           progressive: true,
           svgoPlugins: [{removeViewBox: false}],
           use: [pngquant()]
       }))
-      .pipe(gulp.dest('_images'));
+      .pipe(gulp.dest('images/work'));
+});
+
+/**
+ * Minify images
+ */
+gulp.task('images', function () {
+  return gulp.src('images/*')
+      .pipe(imagemin({
+          progressive: true,
+          svgoPlugins: [{removeViewBox: false}],
+          use: [pngquant()]
+      }))
+      .pipe(gulp.dest('images'));
 });
 
 /**
@@ -117,11 +130,12 @@ gulp.task('clean', function () {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
+    gulp.watch('_src/thumbnail-assets/*.png', ['thumbs']);
     gulp.watch('_images/*', ['images']);
     gulp.watch('_svg/*.svg', ['svgstore']);
     gulp.watch('_sass/*.scss', ['sass']);
     gulp.watch('js/*.js', ['js']);
-    gulp.watch(['*.html', '*.md', '_layouts/*.html', '_includes/*.html', '_posts/*'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '*.md', '_layouts/*.html', '_includes/*.html', '_posts/*', '_work/*'], ['jekyll-rebuild']);
 });
 
 /**

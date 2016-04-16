@@ -16,8 +16,8 @@ url: "http//www.james-chu.com" # the base hostname & protocol for your site
 twitter_username: jamescchu_
 github_username:  jamescchu
 
-exclude: [node_modules, gulpfile.js, package.json]
-include: [images]
+exclude: [node_modules, gulpfile.js, package.json, CNAME]
+include: [images, _work, _work/images]
 
 # Build settings
 markdown: kramdown

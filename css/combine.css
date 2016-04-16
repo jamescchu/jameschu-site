@@ -316,7 +316,11 @@ textarea {
 .main-nav {
   background-color: #292929;
   height: 3rem;
-  z-index: 1; }
+  z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
   .main-nav .nav-header, .main-nav .nav-header-content {
     height: 100%; }
   .main-nav a {
@@ -373,7 +377,8 @@ label[for="nav-trigger"] {
   cursor: pointer; }
 
 .subnav-header {
-  height: 2.5rem; }
+  height: 2.5rem;
+  background-color: #F2F2F2; }
   .subnav-header .subnav-content {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -416,8 +421,8 @@ label[for="nav-trigger"] {
   background-color: #F2F2F2;
   padding: 5rem 0; }
   .hero-section .hero-container {
-    width: 96%;
-    margin: 0 2%;
+    width: 100%;
+    margin: 0 0%;
     overflow: hidden;
     *zoom: 1; }
   .hero-section .hero-content {
@@ -434,8 +439,8 @@ label[for="nav-trigger"] {
 .section {
   background-color: white; }
   .section .section-container {
-    width: 96%;
-    margin: 0 2%;
+    width: 100%;
+    margin: 0 0%;
     overflow: hidden;
     *zoom: 1; }
   .section .hero-image {
@@ -448,6 +453,24 @@ label[for="nav-trigger"] {
     padding: 3.5rem 0; }
     .section .section-content .section-contact {
       padding: 2rem 0; }
+  .section .section-highlight {
+    width: 100%;
+    margin: 0 0%;
+    overflow: hidden;
+    *zoom: 1;
+    padding: 3.5rem 0;
+    background-color: #F2F2F2; }
+    .section .section-highlight .section-highlight-text {
+      float: left;
+      margin-right: -100%;
+      width: 83.33%;
+      margin-left: 8.33%; }
+    .section .section-highlight .section-highlight-image {
+      float: left;
+      margin-right: -100%;
+      width: 100%; }
+    .section .section-highlight .highlight-image {
+      width: 100%; }
 
 #work-grid .work-item {
   margin: 0;

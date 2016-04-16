@@ -3,7 +3,7 @@ layout: default
 title: Work
 permalink: /work/
 ---
-
+{% include base.html %}
 <nav class="subnav-header">
   <div class="subnav-content">
       {% for item in site.data.work_items %}
@@ -19,22 +19,22 @@ permalink: /work/
 <div id="work-grid">
   <div class="work-content">
     <div class="work-item brand">
-      <a href="#"><img alt="640x360" src="http://placehold.it/640x360"></a>
+      <a href="lootcrate/"><img alt="640x360" src="{{ relurl }}images/work/brand_lootcrate.png"></a>
     </div>
     <div class="work-item typography">
-      <a href="#"><img alt="640x360" src="http://placehold.it/640x360"></a>
+      <a href="#"><img alt="640x360" src="{{ relurl }}images/work/type_hitbox.png"></a>
+    </div>
+    <div class="work-item interaction">
+      <a href="#"><img alt="640x360" src="{{ relurl }}images/work/brand_james.png"></a>
+    </div>
+    <div class="work-item interaction">
+      <a href="#"><img alt="640x360" src="{{ relurl }}images/work/ixd_da.png"></a>
+    </div>
+    <div class="work-item typography">
+      <a href="#"><img alt="640x360" src="{{ relurl }}images/work/type_poly.png"></a>
     </div>
     <div class="work-item brand">
-      <a href="#"><img alt="640x360" src="http://placehold.it/640x360"></a>
-    </div>
-    <div class="work-item typography">
-      <a href="#"><img alt="640x360" src="http://placehold.it/640x360"></a>
-    </div>
-    <div class="work-item interaction">
-      <a href="#"><img alt="640x360" src="http://placehold.it/640x360"></a>
-    </div>
-    <div class="work-item interaction">
-      <a href="#"><img alt="640x360" src="http://placehold.it/640x360"></a>
+      <a href="#"><img alt="640x360" src="{{ relurl }}images/work/md_fbn.png"></a>
     </div>
   </div>
 </div>

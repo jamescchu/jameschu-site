@@ -2,6 +2,7 @@
   background-color: $black;
   height: 3rem;
   z-index: 1;
+  user-select: none;
   .nav-header, .nav-header-content {
     height:100%;
   }
@@ -75,6 +76,7 @@ label[for="nav-trigger"] {
 
 .subnav-header {
   height: 2.5rem;
+  background-color: $light-gray;
   .subnav-content {
     display: flex;
     padding: 0 1rem;
