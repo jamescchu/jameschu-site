@@ -453,24 +453,21 @@ label[for="nav-trigger"] {
     padding: 3.5rem 0; }
     .section .section-content .section-contact {
       padding: 2rem 0; }
-  .section .section-highlight {
+
+.section-gray {
+  background-color: #F2F2F2; }
+  .section-gray .section-highlight {
     width: 100%;
     margin: 0 0%;
     overflow: hidden;
-    *zoom: 1;
-    padding: 3.5rem 0;
-    background-color: #F2F2F2; }
-    .section .section-highlight .section-highlight-text {
-      float: left;
-      margin-right: -100%;
-      width: 83.33%;
-      margin-left: 8.33%; }
-    .section .section-highlight .section-highlight-image {
-      float: left;
-      margin-right: -100%;
-      width: 100%; }
-    .section .section-highlight .highlight-image {
-      width: 100%; }
+    *zoom: 1; }
+  .section-gray .section-highlight-text {
+    float: left;
+    margin-right: -100%;
+    width: 83.33%;
+    margin-left: 8.33%; }
+  .section-gray .highlight-image {
+    width: 100%; }
 
 #work-grid .work-item {
   margin: 0;

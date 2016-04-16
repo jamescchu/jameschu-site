@@ -57,24 +57,24 @@
       padding: 2rem 0;
     }
   }
+}
+
+.section-gray {
+  background-color: $light-gray;
   .section-highlight {
     @include container();
     @include clearfix();
-    padding: 3.5rem 0;
-    background-color: $light-gray;
-    .section-highlight-text {
-      @include column(10);
-      @include push(1);
-    }
-    .section-highlight-image {
-      @include column(12);
-    }
-    .highlight-image {
-      width: 100%;
-    }
+  }
+  .section-highlight-text {
+    @include column(10);
+    @include push(1);
+  }
+  .section-highlight-image {
+  }
+  .highlight-image {
+    width: 100%;
   }
 }
-
 #work-grid {
   .work-item {
     margin: 0;
