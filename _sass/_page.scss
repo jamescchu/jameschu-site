@@ -39,13 +39,12 @@
     width: 100%;
   }
 }
-
+.section-container {
+  @include container();
+  @include clearfix();
+}
 .section {
   background-color: white;
-  .section-container {
-    @include container();
-    @include clearfix();
-  }
   .hero-image {
     width: 100%;
   }
@@ -61,15 +60,12 @@
 
 .section-gray {
   background-color: $light-gray;
-  .section-highlight {
-    @include container();
-    @include clearfix();
-  }
   .section-highlight-text {
     @include column(10);
     @include push(1);
   }
   .section-highlight-image {
+    @include container();
   }
   .highlight-image {
     width: 100%;

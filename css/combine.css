@@ -269,7 +269,8 @@ h2 {
 h3 {
   font-weight: 300;
   font-size: 1.1rem;
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  padding-bottom: 1rem; }
 
 p {
   font-weight: 100;
@@ -436,13 +437,14 @@ label[for="nav-trigger"] {
   .recent-section .recent-items {
     width: 100%; }
 
+.section-container {
+  width: 100%;
+  margin: 0 0%;
+  overflow: hidden;
+  *zoom: 1; }
+
 .section {
   background-color: white; }
-  .section .section-container {
-    width: 100%;
-    margin: 0 0%;
-    overflow: hidden;
-    *zoom: 1; }
   .section .hero-image {
     width: 100%; }
   .section .section-content {
@@ -456,16 +458,14 @@ label[for="nav-trigger"] {
 
 .section-gray {
   background-color: #F2F2F2; }
-  .section-gray .section-highlight {
-    width: 100%;
-    margin: 0 0%;
-    overflow: hidden;
-    *zoom: 1; }
   .section-gray .section-highlight-text {
     float: left;
     margin-right: -100%;
     width: 83.33%;
     margin-left: 8.33%; }
+  .section-gray .section-highlight-image {
+    width: 100%;
+    margin: 0 0%; }
   .section-gray .highlight-image {
     width: 100%; }
 
