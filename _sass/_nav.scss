@@ -28,6 +28,28 @@
       margin: 1rem 0;
     }
   }
+  .nav-bread {
+    height: 3rem;
+    width: 3rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .nav-bun {
+    background: white;
+    position: absolute;
+    width: 1.2rem;
+    height: 1px;
+    right: 1rem;
+  }
+
+  .nav-bread-top {
+    top: 1.25rem;
+  }
+  .nav-bread-btm {
+    bottom: 1.25rem;
+  }
 }
 
 .nav-trigger {
@@ -49,7 +71,6 @@ label[for="nav-trigger"] {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
-    background: red;
 }
 
 .subnav-header {
