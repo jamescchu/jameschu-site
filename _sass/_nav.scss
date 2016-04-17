@@ -3,6 +3,7 @@
   height: 3rem;
   z-index: 1;
   user-select: none;
+  text-align: center;
   .nav-header, .nav-header-content {
     height:100%;
   }
@@ -38,11 +39,11 @@
   }
 
   .nav-bun {
-    background: white;
+    background: $white;
     position: absolute;
     width: 1.2rem;
     height: 1px;
-    right: 1rem;
+    right: rem-calc(16);
   }
 
   .nav-bread-top {
@@ -87,7 +88,7 @@ label[for="nav-trigger"] {
   .subnav-item, a:link, a:visited {
     text-transform: lowercase;
     font-size: 1.2rem;
-    color: $primary;
+    color: $primary-color;
     a:hover, a:active {
       opacity: 60%;
     }

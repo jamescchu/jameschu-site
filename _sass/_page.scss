@@ -9,7 +9,7 @@
 }
 
 .page-content {
-  background-color: white;
+  background-color: $white;
   min-height: 8rem;
 }
 
@@ -23,54 +23,58 @@
 
 .hero-section {
   background-color: $light-gray;
-  padding: 5rem 0;
+  padding: rem-calc(70) 0;
   .hero-container {
-    @include container();
-    @include clearfix();
+    @include grid-row;
   }
   .hero-content {
-    @include column(10, 1);
+    @include grid-column(11);
+    @include grid-column-position(center);
   }
 }
 
 .recent-section {
-  background-color: white;
+  background-color: $white;
   .recent-items {
     width: 100%;
   }
 }
-.section-container {
-  @include container();
-  @include clearfix();
-}
 .section {
-  background-color: white;
-  .hero-image {
+  background-color: $white;
+  @include grid-row;
+}
+
+.about-copy {
+  @include grid-column(10);
+  @include grid-column-position(center);
+  padding: 3.5rem 0;
+}
+
+.about-contact {
+  padding: 0 rem-calc(16) 3.5rem;
+}
+
+.work-copy {
+  @include grid-column(10);
+  @include grid-column-position(center);
+  padding: 3.5rem 0;
+}
+
+.work-image {
+  img {
     width: 100%;
-  }
-  .section-content {
-    @include column(10);
-    @include push(1);
-    padding: 3.5rem 0;
-    .section-contact {
-      padding: 2rem 0;
-    }
   }
 }
 
-.section-gray {
-  background-color: $light-gray;
-  .section-highlight-text {
-    @include column(10);
-    @include push(1);
-  }
-  .section-highlight-image {
-    @include container();
-  }
-  .highlight-image {
+.section-header-image {
+  .header-image {
     width: 100%;
   }
 }
+.gray {
+  background-color: $light-gray;
+}
+
 #work-grid {
   .work-item {
     margin: 0;

@@ -1,12 +1,7 @@
-$primary: #4A4A4A;
-
-$light-gray: #F2F2F2;
-
-$black: #292929;
-
 @import 'sanitize';
-@import 'grid';
-
+// @import 'grid';
+@import 'settings/settings';
+@import 'foundation';
 @import 'type';
 @import 'nav';
 @import 'page';

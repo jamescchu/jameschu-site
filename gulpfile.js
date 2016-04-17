@@ -133,7 +133,7 @@ gulp.task('watch', function () {
     gulp.watch('_src/thumbnail-assets/*.png', ['thumbs']);
     gulp.watch('_images/*', ['images']);
     gulp.watch('_svg/*.svg', ['svgstore']);
-    gulp.watch('_sass/*.scss', ['sass']);
+    gulp.watch(['_sass/*.scss', '_sass/**/*.scss'], ['sass']);
     gulp.watch('js/*.js', ['js']);
     gulp.watch(['*.html', '*.md', '_layouts/*.html', '_includes/*.html', '_posts/*', '_work/*'], ['jekyll-rebuild']);
 });
