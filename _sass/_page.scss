@@ -1,3 +1,12 @@
+@mixin copy-layout {
+  @include grid-column(10);
+  @include grid-column-position(center);
+  @include breakpoint(medium) {
+    @include grid-column(5);
+    @include grid-column-position(center);
+  }
+}
+
 .page-wrapper {
   background-color: $black;
   position: relative;
@@ -27,36 +36,63 @@
   .hero-container {
     @include grid-row;
   }
-  .hero-content {
-    @include grid-column(11);
-    @include grid-column-position(center);
+  .hero-copy {
+    @include copy-layout;
   }
 }
 
 .recent-section {
   background-color: $white;
+  @include grid-row;
   .recent-items {
     width: 100%;
+
+  }
+}
+.recent-content {
+  @include breakpoint(large) {
+    @include breakpoint(medium) {
+      @include grid-column(6, 0);
+      padding-bottom: rem-calc(150);
+    }
   }
 }
 .section {
   background-color: $white;
   @include grid-row;
+  .section-header-image {
+    .header-image {
+      width: 100%;
+      @include breakpoint(large) {
+        @include grid-column(12);
+      }
+    }
+  }
+}
+.gray {
+  background-color: $light-gray;
 }
 
 .about-copy {
-  @include grid-column(10);
-  @include grid-column-position(center);
+  @include copy-layout;
   padding: 3.5rem 0;
+  @include breakpoint(large) {
+    @include grid-column(4);
+    @include grid-column-offset(1);
+    padding: rem-calc(140) 0;
+  }
 }
 
 .about-contact {
   padding: 0 rem-calc(16) 3.5rem;
+  @include breakpoint(large) {
+    @include grid-column(6);
+    padding: rem-calc(100) 0;
+  }
 }
 
 .work-copy {
-  @include grid-column(10);
-  @include grid-column-position(center);
+  @include copy-layout;
   padding: 3.5rem 0;
 }
 
@@ -66,19 +102,25 @@
   }
 }
 
-.section-header-image {
-  .header-image {
-    width: 100%;
-  }
-}
-.gray {
-  background-color: $light-gray;
+.recent-copy {
+  @include copy-layout;
+  padding: 3.5rem 0;
 }
 
 #work-grid {
+  @include grid-row;
+  @include breakpoint(large) {
+    padding: 5rem 0;
+  }
   .work-item {
     margin: 0;
     display: none;
+    @include breakpoint(medium) {
+      @include grid-column(6, 0);
+    }
+    @include breakpoint(large) {
+      @include grid-column(4, 0);
+    }
     img {
       width: 100%;
     }
