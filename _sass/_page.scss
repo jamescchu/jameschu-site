@@ -108,21 +108,23 @@
 }
 
 #work-grid {
-  @include grid-row;
-  @include breakpoint(large) {
-    padding: 5rem 0;
+  .work-content {
+    @include grid-row;
+    @include breakpoint(large) {
+      padding: 5rem 0;
+    }
   }
   .work-item {
     margin: 0;
     display: none;
+    img {
+      width: 100%;
+    }
     @include breakpoint(medium) {
       @include grid-column(6, 0);
     }
     @include breakpoint(large) {
       @include grid-column(4, 0);
-    }
-    img {
-      width: 100%;
     }
   }
 }
