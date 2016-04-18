@@ -6,6 +6,12 @@
   text-align: center;
   .nav-header, .nav-header-content {
     height:100%;
+    @include breakpoint(medium) {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
   a {
     padding: 1.18rem 0;
@@ -22,12 +28,36 @@
     width: 100%;
     height: 7.3rem;
     z-index: 0;
+    @include breakpoint(medium) {
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      top: 0;
+      height: 3rem;
+      width: 100%;
+    }
+    .nav-lists-content {
+      @include breakpoint(medium) {
+        height: 100%;
+      }
+    }
+    .svg-logo {
+      display: none;
+      @include breakpoint(medium) {
+        display: block;
+      }
+    }
 
     .svg-nav-about,
     .svg-nav-work {
       height: 1.2rem;
       width: 100%;
       margin: 1rem 0;
+      @include breakpoint(medium) {
+        height: 1.2rem;
+        width: 7.4rem;
+        margin: 0.8rem 0;
+      }
     }
   }
   .nav-bread {
@@ -73,6 +103,10 @@ label[for="nav-trigger"] {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
+    @include breakpoint(medium) {
+      display: none;
+      clip: rect(0, 0, 0, 0);
+    }
 }
 
 .subnav-header {
@@ -90,14 +124,15 @@ label[for="nav-trigger"] {
     justify-content: space-between;
     align-items: center;
     @include breakpoint(medium) {
-      @include grid-column(10);
+      @include grid-column(6);
       @include grid-column-position(center);
     }
     @include breakpoint(large) {
-      @include grid-column(8);
+      @include grid-column(5);
       @include grid-column-position(center);
     }
   }
+
   .subnav-item, a:link, a:visited {
     text-transform: lowercase;
     font-size: 1.2rem;

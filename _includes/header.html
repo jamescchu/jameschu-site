@@ -8,12 +8,11 @@
               <use xlink:href="#svg-logo"></use>
             </svg></a>
         </li>
-        <li>
+        <li class="nav-header-content">
           <label for="nav-trigger">
             <span class="nav-bread">
               <span class="nav-bun nav-bread-top"></span>
             </span>
-
             <span class="nav-bread">
               <span class="nav-bun nav-bread-btm"></span>
             </span>
@@ -21,9 +20,26 @@
         </li>
     </ul>
 
-    <ul class="nav-lists">
+    <!-- <div class="nav-lists-container">
+      <div class="nav-lists-content">
+
+      </div>
       {% for item in site.data.nav_items %}
-        <li  class="nav-lists-content"><a href="{{ relurl }}{{ item.url }}">
+        <div class="nav-lists-content"><a href="{{ relurl }}{{ item.url }}">
+          <svg class="{{ item.svg }}">
+            <use xlink:href="#{{ item.svg }}"></use>
+          </svg></a>
+        </div>
+      {% endfor %}
+    </div> -->
+    <ul class="nav-lists">
+      <li class="nav-lists-content"><a href="{{ relurl }}">
+          <svg class="svg-logo">
+            <use xlink:href="#svg-logo"></use>
+          </svg></a>
+      </li>
+      {% for item in site.data.nav_items %}
+        <li class="nav-lists-content"><a href="{{ relurl }}{{ item.url }}">
           <svg class="{{ item.svg }}">
             <use xlink:href="#{{ item.svg }}"></use>
           </svg></a>

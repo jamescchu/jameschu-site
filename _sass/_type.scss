@@ -10,6 +10,11 @@ h1 {
   font-size: rem-calc(22);
   line-height: rem-calc(25);
   margin-bottom: rem-calc(5);
+  @include breakpoint(medium) {
+    font-size: rem-calc(25);
+    line-height: rem-calc(28);
+    margin-bottom: rem-calc(5);
+  }
 }
 
 h2 {
@@ -21,14 +26,23 @@ h2 {
 h3 {
   font-weight: 300;
   font-size: rem-calc(18);
-  line-height: rem-calc(19);
+  line-height: rem-calc(21);
   padding-bottom: rem-calc(10);
+  @include breakpoint(medium) {
+    font-size: rem-calc(22);
+    line-height: rem-calc(25);
+    margin-bottom: rem-calc(5);
+  }
 }
 
 p {
   font-weight: 100;
   font-size: rem-calc(15);
   line-height: rem-calc(22);
+  @include breakpoint(medium) {
+    font-size: rem-calc(16);
+    line-height: rem-calc(23);
+  }
 }
 .hero-subheadline {
   font-size: rem-calc(18);
@@ -39,7 +53,11 @@ a:link a:visited {
   color: $primary-color;
 }
 a:hover {
-  opacity: 60%;
+  opacity: 0.6;
+}
+
+.active {
+  opacity: 0.6;
 }
 
 .copyright {

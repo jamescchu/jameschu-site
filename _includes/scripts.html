@@ -1,2 +1,4 @@
-<script src="//cdn.jsdelivr.net/g/jquery@2.2.3,jquery.mixitup@2.1.11"></script>
-<script src="{{ relurl }}js/combine.js"></script>
+{% if page.title == 'Work' %}
+  <script src="//cdn.jsdelivr.net/g/jquery@2.2.3,jquery.mixitup@2.1.11,jquery.owlcarousel@1.31"></script>
+  <script src="{{ relurl }}js/combine.js"></script>
+{% endif %}

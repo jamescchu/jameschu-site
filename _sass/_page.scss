@@ -59,7 +59,9 @@
 }
 .section {
   background-color: $white;
-  @include grid-row;
+  .section-content {
+    @include grid-row;
+  }
   .section-header-image {
     .header-image {
       width: 100%;
@@ -68,9 +70,39 @@
       }
     }
   }
+  .work-copy {
+    @include copy-layout;
+    padding: 3.5rem 0;
+  }
+  .work-image {
+    img {
+      width: 100%;
+    }
+  }
 }
 .gray {
   background-color: $light-gray;
+  width: 100%;
+  .work-copy {
+    @include breakpoint(medium) {
+      @include grid-column(4);
+      @include grid-column-offset(1);
+      padding: rem-calc(100) 0;
+      @include breakpoint(large) {
+        @include grid-column(3);
+        @include grid-column-offset(1);
+        padding: rem-calc(200) 0;
+      }
+    }
+  }
+  .work-image {
+    @include breakpoint(medium) {
+      @include grid-column(6,0);
+      @include breakpoint(large) {
+        @include grid-column(6);
+      }
+    }
+  }
 }
 
 .about-copy {
@@ -91,17 +123,6 @@
   }
 }
 
-.work-copy {
-  @include copy-layout;
-  padding: 3.5rem 0;
-}
-
-.work-image {
-  img {
-    width: 100%;
-  }
-}
-
 .recent-copy {
   @include copy-layout;
   padding: 3.5rem 0;
@@ -111,6 +132,7 @@
   .work-content {
     @include grid-row;
     @include breakpoint(large) {
+
       padding: 5rem 0;
     }
   }
@@ -125,6 +147,9 @@
     }
     @include breakpoint(large) {
       @include grid-column(4, 0);
+    }
+    a:hover {
+      opacity: 0.6;
     }
   }
 }
