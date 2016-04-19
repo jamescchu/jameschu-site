@@ -1,6 +1,13 @@
 {% assign relurl = '' %}
-{% assign depth = page.url | split: '/' | size | minus: 1 %}
+{% assign depth = page.url | split: '/' | size | minus: 2 %}
 {% if    depth == 1 %}{% assign relurl = '../' %}
 {% elsif depth == 2 %}{% assign relurl = '../../' %}
 {% elsif depth == 3 %}{% assign relurl = '../../../' %}
 {% elsif depth == 4 %}{% assign relurl = '../../../../' %}{% endif %}
+
+<!-- {% assign relurl = '' %}
+{% assign depth = page.url | split: '/' | size | minus: 1 %}
+{% if    depth == 1 %}{% assign relurl = '../' %}
+{% elsif depth == 2 %}{% assign relurl = '../../' %}
+{% elsif depth == 3 %}{% assign relurl = '../../../' %}
+{% elsif depth == 4 %}{% assign relurl = '../../../../' %}{% endif %} -->
