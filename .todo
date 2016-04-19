@@ -1,15 +1,24 @@
 high
 --
 Add more works and layouts
-Adjust bg color of white thumbnails
 Add more items in work page
-Expand recents to 4 items
+--Expand recents to 4 items
+Change recents to Featured 4 items
+Adjust footer text scheme
 
 med
 --
 Change placeholder text/images
+Fix logo mixed with navigation
 
 low
 --
 Create SEO images
 Add page transitions
+Add more categories
+Fix bug in typography filter
+Fix bug with hamburger menu stuck open when resize
+
+done
+--
+Adjust bg color of white thumbnails

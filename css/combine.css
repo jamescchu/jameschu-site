@@ -606,7 +606,8 @@ label[for="nav-trigger"] {
   .section .section-content {
     max-width: 75rem;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    margin-bottom: 3.125rem; }
     .section .section-content::before, .section .section-content::after {
       content: ' ';
       display: table;
@@ -618,6 +619,9 @@ label[for="nav-trigger"] {
               order: 1; }
     .section .section-content::after {
       clear: both; }
+  @media screen and (min-width: 40em) {
+    .section .section-header-image {
+      margin-top: 3.125rem; } }
   .section .section-header-image .header-image {
     width: 100%; }
     @media screen and (min-width: 64em) {
