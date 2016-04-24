@@ -1,50 +1,30 @@
 {% include svg.html %}
-<input type="checkbox" id="nav-trigger" class="nav-trigger" />
-<header class="main-header">
-  <nav class="main-nav">
-    <ul class="nav-header">
-        <li class="nav-header-content"><a href="{{ relurl }}">
-            <svg class="svg-logo">
-              <use xlink:href="#svg-logo"></use>
-            </svg></a>
-        </li>
-        <li class="nav-header-content">
-          <label for="nav-trigger">
-            <span class="nav-bread">
-              <span class="nav-bun nav-bread-top"></span>
-            </span>
-            <span class="nav-bread">
-              <span class="nav-bun nav-bread-btm"></span>
-            </span>
-          </label>
-        </li>
-    </ul>
-
-    <!-- <div class="nav-lists-container">
-      <div class="nav-lists-content">
-
-      </div>
-      {% for item in site.data.nav_items %}
-        <div class="nav-lists-content"><a href="{{ relurl }}{{ item.url }}">
-          <svg class="{{ item.svg }}">
-            <use xlink:href="#{{ item.svg }}"></use>
-          </svg></a>
-        </div>
-      {% endfor %}
-    </div> -->
-    <ul class="nav-lists">
-      <li class="nav-lists-content"><a href="{{ relurl }}">
-          <svg class="svg-logo">
-            <use xlink:href="#svg-logo"></use>
+<input type="checkbox" id="jc-gn-menustate" class="jc-gn-menustate" />
+<nav id="jc-globalnav">
+  <ul class="jc-gn-header">
+      <li class="jc-gn-item jc-gn-james"><a href="{{ relurl }}">
+          <svg class="jc-svg-james jc-gn-james">
+            <use xlink:href="#jc-svg-james"></use>
           </svg></a>
       </li>
-      {% for item in site.data.nav_items %}
-        <li class="nav-lists-content"><a href="{{ relurl }}{{ item.url }}">
-          <svg class="{{ item.svg }}">
-            <use xlink:href="#{{ item.svg }}"></use>
-          </svg></a>
-        </li>
-      {% endfor %}
-    </ul>
-  </nav>
-</header>
+      <li class="jc-gn-item jc-gn-menuicon">
+        <label for="jc-gn-menustate">
+          <span class="jc-gn-bread">
+            <span class="jc-gn-bun jc-gn-bread-top"></span>
+          </span>
+          <span class="jc-gn-bread">
+            <span class="jc-gn-bun jc-gn-bread-btm"></span>
+          </span>
+        </label>
+      </li>
+  </ul>
+  <ul class="jc-gn-lists">
+    {% for item in site.data.nav_items %}
+      <li class="jc-gn-item jc-gn-{{ item.slug}}"><a href="{{ relurl }}{{ item.slug }}">
+        <svg class="{{ item.svg }} jc-gn-{{ item.slug}}">
+          <use xlink:href="#{{ item.svg }}"></use>
+        </svg></a>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>

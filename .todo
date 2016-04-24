@@ -1,10 +1,6 @@
 high
 --
-Add more works and layouts
-Add more items in work page
---Expand recents to 4 items
-Change recents to Featured 4 items
-Adjust footer text scheme
+
 
 med
 --
@@ -18,7 +14,11 @@ Add page transitions
 Add more categories
 Fix bug in typography filter
 Fix bug with hamburger menu stuck open when resize
+Adjust footer text scheme
 
 done
 --
 Adjust bg color of white thumbnails
+Add more works and layouts
+Add more items in work page
+Change recents to Featured 4 items

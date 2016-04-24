@@ -39,6 +39,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 gulp.task('browser-sync', ['sass', 'jekyll-build'], function() {
     browserSync({
         open: false,
+        notify: false,
         server: {
             baseDir: '_site'
         }
@@ -65,7 +66,7 @@ gulp.task('sass', function () {
  */
 gulp.task('js', function () {
     return gulp.src('js/*.js')
-        .pipe(concat('combine.js'))
+        .pipe(concat('_site/js/combine.js'))
         .pipe(gulp.dest('_site/js'))
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('js'));
@@ -78,7 +79,7 @@ gulp.task('svgstore', function () {
     var svgs = gulp
         .src('_svg/*.svg')
         .pipe(svgmin())
-        .pipe(rename({prefix: 'svg-'}))
+        .pipe(rename({prefix: 'jc-svg-'}))
         .pipe(svgstore({ inlineSvg: true }));
 
     function fileContents (filePath, file) {
@@ -92,29 +93,16 @@ gulp.task('svgstore', function () {
 });
 
 /**
- * Move thumbnails
- */
-gulp.task('thumbs', function () {
-  return gulp.src('_src/thumbnail-assets/*.png')
-      .pipe(imagemin({
-          progressive: true,
-          svgoPlugins: [{removeViewBox: false}],
-          use: [pngquant()]
-      }))
-      .pipe(gulp.dest('images/work'));
-});
-
-/**
  * Minify images
  */
 gulp.task('images', function () {
-  return gulp.src('images/*')
+  return gulp.src('_images/*')
       .pipe(imagemin({
           progressive: true,
           svgoPlugins: [{removeViewBox: false}],
           use: [pngquant()]
       }))
-      .pipe(gulp.dest('images'));
+      .pipe(gulp.dest('_images'));
 });
 
 /**
@@ -122,7 +110,7 @@ gulp.task('images', function () {
  */
 gulp.task('clean', function () {
   return gulp.src('_site', {read: false})
-		.pipe(clean({force: true}));
+		.pipe(clean());
 });
 
 /**
@@ -130,12 +118,11 @@ gulp.task('clean', function () {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-    gulp.watch('_src/thumbnail-assets/*.png', ['thumbs']);
     gulp.watch('_images/*', ['images']);
     gulp.watch('_svg/*.svg', ['svgstore']);
-    gulp.watch(['_sass/*.scss', '_sass/**/*.scss'], ['sass']);
+    gulp.watch('_sass/*.scss', ['sass']);
     gulp.watch('js/*.js', ['js']);
-    gulp.watch(['*.html', '*.md', '_layouts/*.html', '_includes/*.html', '_posts/*', '_work/*'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*'], ['jekyll-rebuild']);
 });
 
 /**

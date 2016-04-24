@@ -1,7 +1,7 @@
 - link: Work
-  svg: svg-nav-work
-  url: work
+  svg: jc-svg-work
+  slug: work
 
 - link: About
-  svg: svg-nav-about
-  url: about
+  svg: jc-svg-about
+  slug: about

@@ -1,16 +1,19 @@
+{% include base.html %}
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% if page.title %}{{ page.title }} &ndash; {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ site.description }}" />
-
-  {% include base.html %}
-
-  <!--[if lt IE 8]>
-      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
-
+  <meta property="og:type" content="website"/>
+  <meta property="og:site_name" content="{{ site.title }}"/>
+  <meta property="og:title" content="{{ site.title }}"/>
+  <meta property="og:url" content="{{ site.url }}"/>
+  <meta property="og:image" content="{{ relurl }}images/seo/fb-thumb.jpg"/>
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ site.title }}">
+  <meta name="twitter:url" content="{{ site.url }}">
+  <meta name="twitter:image" content="{{ relurl }}images/seo/tw-thumb.jpg">
   <meta name="Author" content="{{ site.author }}">
 	<meta name="msapplication-TileColor" content="#000000">
 	<meta name="msapplication-TileImage" content="{{ relurl }}images/favicon/favicon-144.png">
@@ -19,8 +22,6 @@
 	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="{{ relurl }}images/favicon/favicon-120.png">
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ relurl }}images/favicon/favicon-144.png">
 	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="{{ relurl }}images/favicon/favicon-152.png">
-
   <link href='https://fonts.googleapis.com/css?family=Roboto:100,300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="{{ relurl }}css/combine.css">
-
 </head>

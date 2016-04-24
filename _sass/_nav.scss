@@ -1,112 +1,100 @@
-.main-nav {
-  background-color: $black;
-  height: 3rem;
-  z-index: 1;
-  user-select: none;
-  text-align: center;
-  .nav-header, .nav-header-content {
-    height:100%;
-    @include breakpoint(medium) {
-      display: none;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
-  }
-  a {
-    padding: 1.18rem 0;
-    .svg-logo {
-      height: 1.7rem;
-      width: 7.4rem;
-      margin: 0.65rem;
-    }
-  }
-  .nav-lists{
-    background-color: $black;
-    position: absolute;
-    top: 3rem;
-    width: 100%;
-    height: 7.3rem;
-    z-index: 0;
-    @include breakpoint(medium) {
-      background-color: transparent;
-      display: flex;
-      justify-content: center;
-      top: 0;
-      height: 3rem;
-      width: 100%;
-    }
-    .nav-lists-content {
-      @include breakpoint(medium) {
-        height: 100%;
-      }
-    }
-    .svg-logo {
-      display: none;
-      @include breakpoint(medium) {
-        display: block;
-      }
-    }
-
-    .svg-nav-about,
-    .svg-nav-work {
-      height: 1.2rem;
-      width: 100%;
-      margin: 1rem 0;
-      @include breakpoint(medium) {
-        height: 1.2rem;
-        width: 7.4rem;
-        margin: 0.8rem 0;
-      }
-    }
-  }
-  .nav-bread {
-    height: 3rem;
-    width: 3rem;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .nav-bun {
-    background: $white;
-    position: absolute;
-    width: 1.2rem;
-    height: 1px;
-    right: rem-calc(16);
-  }
-
-  .nav-bread-top {
-    top: 1.25rem;
-  }
-  .nav-bread-btm {
-    bottom: 1.25rem;
-  }
-}
-
-.nav-trigger {
+.jc-gn-menustate {
   position: absolute;
   display: none;
   clip: rect(0, 0, 0, 0);
   &:checked ~ .page-wrapper {
-    top: 7.3rem;
+    top: rem-calc(100);
     transition: top ease-out 0.3s;
   }
 }
-
-label[for="nav-trigger"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    margin-left: -1.5rem;
-    width: 3rem;
-    height: 3rem;
-    cursor: pointer;
-    @include breakpoint(medium) {
-      display: none;
-      clip: rect(0, 0, 0, 0);
+#jc-globalnav {
+  background-color: $black;
+  height: rem-calc(48);
+  z-index: 5;
+  @include breakpoint(medium) {
+    @include grid-row;
+  }
+  .jc-gn {
+    &-header {
+      width: 100%;
+      height: rem-calc(48);
+      @include breakpoint(medium) {
+        width: auto;
+        @include grid-column(2);
+      }
     }
+    &-james {
+      fill: $light-gray;
+      height: rem-calc(48);
+      width: 100%;
+      @include breakpoint(medium) {
+        width: rem-calc(100);
+      }
+    }
+    &-about, &-work {
+      @extend .jc-gn-james;
+      @include breakpoint(medium) {
+        width: rem-calc(56);
+        margin-left: rem-calc(16);
+        display: inline;
+      }
+    }
+    &-lists{
+      background-color: $black;
+      position: absolute;
+      top: rem-calc(48);
+      width: 100%;
+      height: rem-calc(100);
+      z-index: 0;
+      @include breakpoint(medium) {
+        background-color: transparent;
+        position: static;
+        width: auto;
+        text-align: right;
+        height: rem-calc(48);
+        @include grid-column(5);
+      }
+    }
+    &-menuicon {
+      @include show-for-only(small);
+    }
+    &-bread {
+      height: 3rem;
+      width: 3rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+
+    &-bun {
+      background: $white;
+      position: absolute;
+      width: 1.2rem;
+      height: 1px;
+      right: rem-calc(16);
+    }
+
+    &-bread-top {
+      top: 1.25rem;
+    }
+    &-bread-btm {
+      bottom: 1.25rem;
+    }
+    label[for="&-menustate"] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        margin-left: -1.5rem;
+        width: 3rem;
+        height: 3rem;
+        cursor: pointer;
+        @include breakpoint(medium) {
+          display: none;
+          clip: rect(0, 0, 0, 0);
+        }
+    }
+  }
 }
 
 .subnav-header {

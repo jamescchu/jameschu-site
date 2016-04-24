@@ -61,7 +61,6 @@
   background-color: $white;
   .section-content {
     @include grid-row;
-    margin-bottom: rem-calc(50);
   }
   .section-header-image {
     @include breakpoint(medium) {
