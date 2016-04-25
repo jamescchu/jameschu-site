@@ -15,11 +15,11 @@
   left: 0;
   z-index: 1;
   transition: top 0.2s;
+  min-height: 8rem;
 }
 
 .page-content {
   background-color: $white;
-  min-height: 8rem;
 }
 
 .main-footer {

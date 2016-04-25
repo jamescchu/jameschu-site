@@ -1,0 +1,13 @@
+<nav id="jc-localnav">
+  <div class="jc-ln-content">
+    <ul class="jc-ln-list">
+        {% for item in site.data.work_items %}
+          <li class="jc-ln-item">
+            <a href="#" class="subnav-btn" data-filter="{{ item.filter }}">
+              <span>{{ item.cat }}</span>
+            </a>
+          </li>
+        {% endfor %}
+    </ul>
+  </div>
+</nav>

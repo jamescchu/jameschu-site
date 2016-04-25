@@ -4,20 +4,7 @@ title: Work
 permalink: /work/
 ---
 {% include base.html %}
-<nav class="subnav-header">
-  <div class="subnav-container">
-    <div class="subnav-content">
-        {% for item in site.data.work_items %}
-          <div class="subnav-item">
-            <a href="#" class="subnav-btn" data-filter="{{ item.filter }}">
-              {{ item.cat }}
-            </a>
-          </div>
-        {% endfor %}
-    </div>
-  </div>
-</nav>
-
+{% include localnav.html %}
 <div id="work-grid">
   <div class="work-content">
     <div class="work-item typography">

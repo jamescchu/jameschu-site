@@ -1,0 +1,32 @@
+{% include svg.html %}
+<input type="checkbox" id="jc-gn-menustate" class="jc-gn-menustate" />
+<nav id="jc-globalnav">
+  <div class="jc-gn-content">
+    <ul class="jc-gn-header">
+        <li class="jc-gn-item jc-gn-james"><a href="{{ relurl }}">
+            <svg class="jc-svg-james jc-gn-james">
+              <use xlink:href="#jc-svg-james"></use>
+            </svg></a>
+        </li>
+        <li class="jc-gn-item jc-gn-menuicon">
+          <label for="jc-gn-menustate">
+            <span class="jc-gn-bread">
+              <span class="jc-gn-bun jc-gn-bread-top"></span>
+            </span>
+            <span class="jc-gn-bread">
+              <span class="jc-gn-bun jc-gn-bread-btm"></span>
+            </span>
+          </label>
+        </li>
+    </ul>
+    <ul class="jc-gn-list">
+      {% for item in site.data.nav_items %}
+        <li class="jc-gn-item jc-gn-{{ item.slug}}"><a href="{{ relurl }}{{ item.slug }}">
+          <svg class="{{ item.svg }} jc-gn-{{ item.slug}}">
+            <use xlink:href="#{{ item.svg }}"></use>
+          </svg></a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

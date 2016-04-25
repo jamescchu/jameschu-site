@@ -1,20 +1,13 @@
-.jc-gn-menustate {
-  position: absolute;
-  display: none;
-  clip: rect(0, 0, 0, 0);
-  &:checked ~ .page-wrapper {
-    top: rem-calc(100);
-    transition: top ease-out 0.3s;
-  }
-}
 #jc-globalnav {
   background-color: $black;
   height: rem-calc(48);
   z-index: 5;
-  @include breakpoint(medium) {
-    @include grid-row;
-  }
   .jc-gn {
+    &-content {
+      @include breakpoint(medium) {
+        @include grid-row;
+      }
+    }
     &-header {
       width: 100%;
       height: rem-calc(48);
@@ -31,6 +24,9 @@
         width: rem-calc(100);
       }
     }
+    &-item {
+      height: rem-calc(48);
+    }
     &-about, &-work {
       @extend .jc-gn-james;
       @include breakpoint(medium) {
@@ -39,7 +35,7 @@
         display: inline;
       }
     }
-    &-lists{
+    &-list{
       background-color: $black;
       position: absolute;
       top: rem-calc(48);
@@ -57,15 +53,19 @@
     }
     &-menuicon {
       @include show-for-only(small);
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: rem-calc(48);
+      z-index: 5;
     }
     &-bread {
-      height: 3rem;
-      width: 3rem;
+      width: rem-calc(48);
+      height: rem-calc(48);
       position: absolute;
       right: 0;
       top: 0;
     }
-
     &-bun {
       background: $white;
       position: absolute;
@@ -73,7 +73,6 @@
       height: 1px;
       right: rem-calc(16);
     }
-
     &-bread-top {
       top: 1.25rem;
     }
@@ -96,37 +95,55 @@
     }
   }
 }
+#jc-gn-menustate {
+  position: absolute;
+  display: none;
+  clip: rect(0, 0, 0, 0);
+  @include breakpoint(small only) {
+    &:checked ~ .page-wrapper {
+      top: rem-calc(100);
+      transition: top ease-out 0.3s;
+    }
+  }
+}
 
-.subnav-header {
-  height: 2.5rem;
+#jc-localnav {
+  height: rem-calc(40);
   background-color: $light-gray;
-  .subnav-container {
-    @include grid-row;
-    height: 100%;
-  }
-  .subnav-content {
-    @include grid-column(12);
-    display: flex;
-    padding: 0 1rem;
-    height: 100%;
-    justify-content: space-between;
-    align-items: center;
-    @include breakpoint(medium) {
-      @include grid-column(6);
-      @include grid-column-position(center);
+  .jc-ln {
+    &-content {
+      @include breakpoint(medium) {
+        @include grid-row;
+      }
     }
-    @include breakpoint(large) {
-      @include grid-column(5);
-      @include grid-column-position(center);
+    &-list {
+      height: rem-calc(40);
+      text-align: justify;
+      margin: 0 1rem;
+      @include breakpoint(medium) {
+        @include grid-column(5);
+        @include grid-column-position(center);
+      }
     }
-  }
-
-  .subnav-item, a:link, a:visited {
-    text-transform: lowercase;
-    font-size: 1.2rem;
-    color: $primary-color;
-    a:hover, a:active {
-      opacity: 60%;
+    &-item, a:link, a:visited {
+      font-size: rem-calc(16);
+      text-transform: lowercase;
+      color: $primary-color;
+      line-height: rem-calc(40);
+      height: rem-calc(40);
+      width: auto;
+      display: inline-block;
+      a:hover, a:active {
+        color: $primary-color;
+        opacity: 60%;
+      }
+    }
+    &-list:after {
+      content: '';
+      width: 100%;
+      display: inline-block;
+      font-size: 0;
+      line-height: 0;
     }
   }
 }
