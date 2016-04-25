@@ -3,6 +3,7 @@
   height: rem-calc(48);
   user-select: none;
   z-index: 5;
+
   @include breakpoint(medium) {
     @include grid-row;
   }
@@ -12,6 +13,7 @@
         @include grid-column(10);
         @include grid-column-position(center);
       }
+
       @include breakpoint(large) {
         @include grid-column(12);
         @include grid-column-position(center);
@@ -20,8 +22,10 @@
     &-header {
       width: 100%;
       height: rem-calc(48);
+
       @include breakpoint(medium) {
         width: auto;
+
         @include grid-column(2,0);
       }
     }
@@ -29,6 +33,7 @@
       fill: $light-gray;
       height: rem-calc(48);
       width: 100%;
+
       @include breakpoint(medium) {
         width: rem-calc(100);
       }
@@ -36,27 +41,30 @@
     &-item {
       height: rem-calc(48);
     }
-    &-about, &-work {
+    &-about,
+    &-work {
       @extend .jc-gn-james;
+
       @include breakpoint(medium) {
-        width: rem-calc(56);
         margin-left: rem-calc(16);
         display: inline;
       }
     }
-    &-list{
+    &-list {
       background-color: $black;
       position: absolute;
       top: rem-calc(48);
       width: 100%;
       height: rem-calc(100);
       z-index: 0;
+
       @include breakpoint(medium) {
         background-color: transparent;
         position: static;
         width: auto;
         text-align: right;
         height: rem-calc(48);
+
         @include grid-column(5,0);
       }
     }
@@ -97,6 +105,7 @@
       width: 3rem;
       height: 3rem;
       cursor: pointer;
+
       @include breakpoint(medium) {
         display: none;
         clip: rect(0, 0, 0, 0);
@@ -104,10 +113,12 @@
     }
   }
 }
+
 #jc-gn-menustate {
   position: absolute;
   display: none;
   clip: rect(0, 0, 0, 0);
+
   @include breakpoint(small only) {
     &:checked ~ .page-wrapper {
       top: rem-calc(100);
@@ -131,13 +142,18 @@
       height: rem-calc(48);
       text-align: justify;
       margin: 0 1rem;
+
       @include breakpoint(medium) {
         @include grid-column(5);
         @include grid-column-position(center);
       }
     }
-    &-item, a:link, a:visited, &-text {
+    &-item,
+    a:link,
+    a:visited,
+    &-text {
       font-size: rem-calc(16);
+
       @include breakpoint(medium) {
         font-size: rem-calc(18);
       }
@@ -147,11 +163,12 @@
       height: rem-calc(48);
       width: auto;
       display: inline-block;
-      a:hover, a:active {
+      a:hover,
+      a:active {
         opacity: 0.6;
       }
     }
-    &-list:after {
+    &-list::after {
       content: '';
       width: 100%;
       display: inline-block;
