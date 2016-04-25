@@ -1,9 +1,9 @@
 $(function(){
     $(window).load(function(){
-      $('#work-grid').mixItUp({
+      $('#work-gallery').mixItUp({
         selectors: {
           target: '.work-item',
-          filter: '.subnav-btn'
+          filter: '.jc-ln-filter'
         },
         animation: {
       		duration: 400,

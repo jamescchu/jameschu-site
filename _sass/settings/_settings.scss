@@ -56,8 +56,8 @@ $foundation-palette: (
   alert: #ec5840,
 );
 $light-gray: #F2F2F2;
-$medium-gray: #cacaca;
-$dark-gray: #8a8a8a;
+$medium-gray: #D8D8D8;
+$dark-gray: #7B7B7B;
 $black: #292929;
 $white: #fefefe;
 $body-background: $black;
@@ -81,7 +81,7 @@ $print-transparent-backgrounds: true;
 $breakpoints: (
   small: 0,
   medium: 640px,
-  large: 1024px,
+  large: 1100px,
   xlarge: 1200px,
   xxlarge: 1440px,
 );

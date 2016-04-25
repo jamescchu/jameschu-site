@@ -1,11 +1,20 @@
 #jc-globalnav {
   background-color: $black;
   height: rem-calc(48);
+  user-select: none;
   z-index: 5;
+  @include breakpoint(medium) {
+    @include grid-row;
+  }
   .jc-gn {
     &-content {
       @include breakpoint(medium) {
-        @include grid-row;
+        @include grid-column(10);
+        @include grid-column-position(center);
+      }
+      @include breakpoint(large) {
+        @include grid-column(12);
+        @include grid-column-position(center);
       }
     }
     &-header {
@@ -13,7 +22,7 @@
       height: rem-calc(48);
       @include breakpoint(medium) {
         width: auto;
-        @include grid-column(2);
+        @include grid-column(2,0);
       }
     }
     &-james {
@@ -48,7 +57,7 @@
         width: auto;
         text-align: right;
         height: rem-calc(48);
-        @include grid-column(5);
+        @include grid-column(5,0);
       }
     }
     &-menuicon {
@@ -80,18 +89,18 @@
       bottom: 1.25rem;
     }
     label[for="&-menustate"] {
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 2;
-        margin-left: -1.5rem;
-        width: 3rem;
-        height: 3rem;
-        cursor: pointer;
-        @include breakpoint(medium) {
-          display: none;
-          clip: rect(0, 0, 0, 0);
-        }
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 2;
+      margin-left: -1.5rem;
+      width: 3rem;
+      height: 3rem;
+      cursor: pointer;
+      @include breakpoint(medium) {
+        display: none;
+        clip: rect(0, 0, 0, 0);
+      }
     }
   }
 }
@@ -108,8 +117,10 @@
 }
 
 #jc-localnav {
-  height: rem-calc(40);
+  height: rem-calc(48);
   background-color: $light-gray;
+  border-bottom: 1px solid $medium-gray;
+  user-select: none;
   .jc-ln {
     &-content {
       @include breakpoint(medium) {
@@ -117,7 +128,7 @@
       }
     }
     &-list {
-      height: rem-calc(40);
+      height: rem-calc(48);
       text-align: justify;
       margin: 0 1rem;
       @include breakpoint(medium) {
@@ -125,17 +136,19 @@
         @include grid-column-position(center);
       }
     }
-    &-item, a:link, a:visited {
+    &-item, a:link, a:visited, &-text {
       font-size: rem-calc(16);
+      @include breakpoint(medium) {
+        font-size: rem-calc(18);
+      }
       text-transform: lowercase;
       color: $primary-color;
-      line-height: rem-calc(40);
-      height: rem-calc(40);
+      line-height: rem-calc(48);
+      height: rem-calc(48);
       width: auto;
       display: inline-block;
       a:hover, a:active {
-        color: $primary-color;
-        opacity: 60%;
+        opacity: 0.6;
       }
     }
     &-list:after {

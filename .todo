@@ -1,24 +1,26 @@
 high
 --
-
+Refactor existing codebase [wip]
+Work on projects backend framework
+Create nav svg for large breakpoint
 
 med
 --
-Change placeholder text/images
-Fix logo mixed with navigation
+Add more categories
 
 low
 --
 Create SEO images
 Add page transitions
-Add more categories
-Fix bug in typography filter
-Fix bug with hamburger menu stuck open when resize
-Adjust footer text scheme
 
 done
 --
-Adjust bg color of white thumbnails
-Add more works and layouts
-Add more items in work page
-Change recents to Featured 4 items
+Adjust bg color of white thumbnails [4/18]
+Add more works and layouts [4/18]
+Add more items in work page [4/19]
+Change recents to Featured 4 items [4/19]
+Change placeholder text/images [4/19]
+Fix bug in typography filter [4/19]
+Fix bug with hamburger menu stuck open when resize [4/24]
+Adjust footer text scheme [4/24]
+Fix logo mixed with navigation [4/24]

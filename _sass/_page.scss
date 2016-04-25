@@ -1,8 +1,27 @@
-@mixin copy-layout {
+@mixin copy-layout-half {
   @include grid-column(10);
   @include grid-column-position(center);
+  padding: rem-calc(70) 0;
   @include breakpoint(medium) {
-    @include grid-column(5);
+    @include grid-column(8);
+    @include grid-column-position(center);
+  }
+  @include breakpoint(large) {
+    @include grid-column(6);
+    @include grid-column-position(center);
+  }
+}
+
+@mixin copy-layout-full {
+  @include grid-column(10);
+  @include grid-column-position(center);
+  padding: rem-calc(70) 0;
+  @include breakpoint(medium) {
+    @include grid-column(8);
+    @include grid-column-position(center);
+  }
+  @include breakpoint(large) {
+    @include grid-column(6);
     @include grid-column-position(center);
   }
 }
@@ -11,9 +30,9 @@
   background-color: $black;
   position: relative;
   top: 0;
-  bottom: 100%;
   left: 0;
   z-index: 1;
+  bottom: 100%;
   transition: top 0.2s;
   min-height: 8rem;
 }
@@ -32,37 +51,19 @@
 
 .hero-section {
   background-color: $light-gray;
-  padding: rem-calc(70) 0;
   .hero-container {
     @include grid-row;
   }
   .hero-copy {
-    @include copy-layout;
-  }
-}
-
-.recent-section {
-  background-color: $white;
-  @include grid-row;
-  .recent-items {
-    width: 100%;
-
-  }
-}
-.recent-content {
-  @include breakpoint(large) {
-    @include breakpoint(medium) {
-      @include grid-column(6, 0);
-      padding-bottom: rem-calc(150);
-    }
+    @include copy-layout-full;
   }
 }
 .section {
   background-color: $white;
-  .section-content {
+  &-content {
     @include grid-row;
   }
-  .section-header-image {
+  &-header-image {
     @include breakpoint(medium) {
       margin-top: rem-calc(50);
     }
@@ -73,15 +74,58 @@
       }
     }
   }
+  &-half-copy {
+    @include copy-layout-half;
+    @include breakpoint(large) {
+      @include grid-column(4);
+      @include grid-column-offset(1);
+      padding: rem-calc(140) 0;
+    }
+  }
+  &-copy {
+    @include copy-layout-full;
+  }
+  &-half-block {
+    padding: 0 rem-calc(16) 3.5rem;
+    @include breakpoint(medium) {
+      @include grid-column(10);
+      @include grid-column-offset(1);
+      @include grid-column-end;
+    }
+    @include breakpoint(large) {
+      @include grid-column(5);
+      @include grid-column-offset(1);
+      @include grid-column-end;
+      padding: rem-calc(100) 0;
+    }
+  }
+  &-image-block {
+    @include grid-column(12, 0);
+    @include breakpoint(medium) {
+      @include grid-column(6, 0);
+    }
+  }
+  &-start {
+    @include breakpoint(large) {
+      padding-top: rem-calc(100);
+    }
+  }
+  &-end {
+    @include breakpoint(large) {
+      padding-bottom: rem-calc(100);
+    }
+  }
   .work-copy {
-    @include copy-layout;
-    padding: 3.5rem 0;
+    @include copy-layout-half;
   }
   .work-image {
     img {
       width: 100%;
     }
   }
+}
+.image-thumbs {
+  width: 100%;
 }
 .gray {
   background-color: $light-gray;
@@ -107,52 +151,23 @@
     }
   }
 }
-
-.about-copy {
-  @include copy-layout;
-  padding: 3.5rem 0;
-  @include breakpoint(large) {
-    @include grid-column(4);
-    @include grid-column-offset(1);
-    padding: rem-calc(140) 0;
-  }
-}
-
-.about-contact {
-  padding: 0 rem-calc(16) 3.5rem;
-  @include breakpoint(large) {
-    @include grid-column(6);
-    padding: rem-calc(100) 0;
-  }
-}
-
-.recent-copy {
-  @include copy-layout;
-  padding: 3.5rem 0;
-}
-
-#work-grid {
-  .work-content {
-    @include grid-row;
-    @include breakpoint(large) {
-
-      padding: 5rem 0;
+#work-gallery {
+  .work {
+    &-content {
+      @include grid-row;
     }
-  }
-  .work-item {
-    margin: 0;
-    display: none;
-    img {
-      width: 100%;
-    }
-    @include breakpoint(medium) {
-      @include grid-column(6, 0);
-    }
-    @include breakpoint(large) {
-      @include grid-column(4, 0);
-    }
-    a:hover {
-      opacity: 0.6;
+    &-item {
+      margin: 0;
+      display: none;
+      @include breakpoint(medium) {
+        @include grid-column(6, 0);
+      }
+      @include breakpoint(large) {
+        @include grid-column(4, 0);
+      }
+      a:hover {
+        opacity: 0.6;
+      }
     }
   }
 }

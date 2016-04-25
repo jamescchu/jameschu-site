@@ -297,7 +297,7 @@ a:hover {
 
 .copyright {
   font-size: 0.8rem;
-  color: #4A4A4A; }
+  color: #7B7B7B; }
 
 input[type=text] {
   height: 2.5rem;
@@ -329,13 +329,17 @@ textarea {
 #jc-globalnav {
   background-color: #292929;
   height: 3rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   z-index: 5; }
   @media screen and (min-width: 40em) {
-    #jc-globalnav .jc-gn-content {
+    #jc-globalnav {
       max-width: 75rem;
       margin-left: auto;
       margin-right: auto; }
-      #jc-globalnav .jc-gn-content::before, #jc-globalnav .jc-gn-content::after {
+      #jc-globalnav::before, #jc-globalnav::after {
         content: ' ';
         display: table;
         -webkit-flex-basis: 0;
@@ -344,8 +348,40 @@ textarea {
         -webkit-order: 1;
             -ms-flex-order: 1;
                 order: 1; }
-      #jc-globalnav .jc-gn-content::after {
+      #jc-globalnav::after {
         clear: both; } }
+  @media screen and (min-width: 40em) {
+    #jc-globalnav .jc-gn-content {
+      width: 83.33333%;
+      float: left;
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+      float: none;
+      margin-left: auto;
+      margin-right: auto; } }
+  @media screen and (min-width: 40em) and (min-width: 40em) {
+    #jc-globalnav .jc-gn-content {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+  @media screen and (min-width: 40em) {
+      #jc-globalnav .jc-gn-content:last-child:not(:first-child) {
+        float: right; } }
+  @media screen and (min-width: 68.75em) {
+    #jc-globalnav .jc-gn-content {
+      width: 100%;
+      float: left;
+      padding-left: 0.625rem;
+      padding-right: 0.625rem;
+      float: none;
+      margin-left: auto;
+      margin-right: auto; } }
+  @media screen and (min-width: 68.75em) and (min-width: 40em) {
+    #jc-globalnav .jc-gn-content {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+  @media screen and (min-width: 68.75em) {
+      #jc-globalnav .jc-gn-content:last-child:not(:first-child) {
+        float: right; } }
   #jc-globalnav .jc-gn-header {
     width: 100%;
     height: 3rem; }
@@ -353,14 +389,7 @@ textarea {
       #jc-globalnav .jc-gn-header {
         width: auto;
         width: 16.66667%;
-        float: left;
-        padding-left: 0.625rem;
-        padding-right: 0.625rem; } }
-  @media screen and (min-width: 40em) and (min-width: 40em) {
-    #jc-globalnav .jc-gn-header {
-      padding-left: 0.9375rem;
-      padding-right: 0.9375rem; } }
-    @media screen and (min-width: 40em) {
+        float: left; }
         #jc-globalnav .jc-gn-header:last-child:not(:first-child) {
           float: right; } }
   #jc-globalnav .jc-gn-james, #jc-globalnav .jc-gn-about, #jc-globalnav .jc-gn-work {
@@ -392,14 +421,7 @@ textarea {
         text-align: right;
         height: 3rem;
         width: 41.66667%;
-        float: left;
-        padding-left: 0.625rem;
-        padding-right: 0.625rem; } }
-  @media screen and (min-width: 40em) and (min-width: 40em) {
-    #jc-globalnav .jc-gn-list {
-      padding-left: 0.9375rem;
-      padding-right: 0.9375rem; } }
-    @media screen and (min-width: 40em) {
+        float: left; }
         #jc-globalnav .jc-gn-list:last-child:not(:first-child) {
           float: right; } }
   #jc-globalnav .jc-gn-menuicon {
@@ -451,8 +473,13 @@ textarea {
       transition: top ease-out 0.3s; } }
 
 #jc-localnav {
-  height: 2.5rem;
-  background-color: #F2F2F2; }
+  height: 3rem;
+  background-color: #F2F2F2;
+  border-bottom: 1px solid #D8D8D8;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
   @media screen and (min-width: 40em) {
     #jc-localnav .jc-ln-content {
       max-width: 75rem;
@@ -470,7 +497,7 @@ textarea {
       #jc-localnav .jc-ln-content::after {
         clear: both; } }
   #jc-localnav .jc-ln-list {
-    height: 2.5rem;
+    height: 3rem;
     text-align: justify;
     margin: 0 1rem; }
     @media screen and (min-width: 40em) {
@@ -489,17 +516,19 @@ textarea {
     @media screen and (min-width: 40em) {
         #jc-localnav .jc-ln-list:last-child:not(:first-child) {
           float: right; } }
-  #jc-localnav .jc-ln-item, #jc-localnav .jc-ln a:link, #jc-localnav .jc-ln a:visited {
+  #jc-localnav .jc-ln-item, #jc-localnav .jc-ln a:link, #jc-localnav .jc-ln a:visited, #jc-localnav .jc-ln-text {
     font-size: 1rem;
     text-transform: lowercase;
     color: #4A4A4A;
-    line-height: 2.5rem;
-    height: 2.5rem;
+    line-height: 3rem;
+    height: 3rem;
     width: auto;
     display: inline-block; }
-    #jc-localnav .jc-ln-item a:hover, #jc-localnav .jc-ln-item a:active, #jc-localnav .jc-ln a:link a:hover, #jc-localnav .jc-ln a:link a:active, #jc-localnav .jc-ln a:visited a:hover, #jc-localnav .jc-ln a:visited a:active {
-      color: #4A4A4A;
-      opacity: 60%; }
+    @media screen and (min-width: 40em) {
+      #jc-localnav .jc-ln-item, #jc-localnav .jc-ln a:link, #jc-localnav .jc-ln a:visited, #jc-localnav .jc-ln-text {
+        font-size: 1.125rem; } }
+    #jc-localnav .jc-ln-item a:hover, #jc-localnav .jc-ln-item a:active, #jc-localnav .jc-ln a:link a:hover, #jc-localnav .jc-ln a:link a:active, #jc-localnav .jc-ln a:visited a:hover, #jc-localnav .jc-ln a:visited a:active, #jc-localnav .jc-ln-text a:hover, #jc-localnav .jc-ln-text a:active {
+      opacity: 0.6; }
   #jc-localnav .jc-ln-list:after {
     content: '';
     width: 100%;
@@ -511,9 +540,9 @@ textarea {
   background-color: #292929;
   position: relative;
   top: 0;
-  bottom: 100%;
   left: 0;
   z-index: 1;
+  bottom: 100%;
   transition: top 0.2s;
   min-height: 8rem; }
 
@@ -527,8 +556,7 @@ textarea {
     padding: 0.4rem 0; }
 
 .hero-section {
-  background-color: #F2F2F2;
-  padding: 4.375rem 0; }
+  background-color: #F2F2F2; }
   .hero-section .hero-container {
     max-width: 75rem;
     margin-left: auto;
@@ -551,7 +579,8 @@ textarea {
     padding-right: 0.625rem;
     float: none;
     margin-left: auto;
-    margin-right: auto; }
+    margin-right: auto;
+    padding: 4.375rem 0; }
     @media screen and (min-width: 40em) {
       .hero-section .hero-copy {
         padding-left: 0.9375rem;
@@ -560,7 +589,7 @@ textarea {
       float: right; }
     @media screen and (min-width: 40em) {
       .hero-section .hero-copy {
-        width: 41.66667%;
+        width: 66.66667%;
         float: left;
         padding-left: 0.625rem;
         padding-right: 0.625rem;
@@ -574,41 +603,30 @@ textarea {
     @media screen and (min-width: 40em) {
         .hero-section .hero-copy:last-child:not(:first-child) {
           float: right; } }
-
-.recent-section {
-  background-color: #fefefe;
-  max-width: 75rem;
-  margin-left: auto;
-  margin-right: auto; }
-  .recent-section::before, .recent-section::after {
-    content: ' ';
-    display: table;
-    -webkit-flex-basis: 0;
-        -ms-flex-preferred-size: 0;
-            flex-basis: 0;
-    -webkit-order: 1;
-        -ms-flex-order: 1;
-            order: 1; }
-  .recent-section::after {
-    clear: both; }
-  .recent-section .recent-items {
-    width: 100%; }
-
-@media screen and (min-width: 64em) and (min-width: 40em) {
-  .recent-content {
-    width: 50%;
-    float: left;
-    padding-bottom: 9.375rem; }
-    .recent-content:last-child:not(:first-child) {
-      float: right; } }
+    @media screen and (min-width: 68.75em) {
+      .hero-section .hero-copy {
+        width: 50%;
+        float: left;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        float: none;
+        margin-left: auto;
+        margin-right: auto; } }
+  @media screen and (min-width: 68.75em) and (min-width: 40em) {
+    .hero-section .hero-copy {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+    @media screen and (min-width: 68.75em) {
+        .hero-section .hero-copy:last-child:not(:first-child) {
+          float: right; } }
 
 .section {
   background-color: #fefefe; }
-  .section .section-content {
+  .section-content {
     max-width: 75rem;
     margin-left: auto;
     margin-right: auto; }
-    .section .section-content::before, .section .section-content::after {
+    .section-content::before, .section-content::after {
       content: ' ';
       display: table;
       -webkit-flex-basis: 0;
@@ -617,26 +635,187 @@ textarea {
       -webkit-order: 1;
           -ms-flex-order: 1;
               order: 1; }
-    .section .section-content::after {
+    .section-content::after {
       clear: both; }
   @media screen and (min-width: 40em) {
-    .section .section-header-image {
+    .section-header-image {
       margin-top: 3.125rem; } }
-  .section .section-header-image .header-image {
+  .section-header-image .header-image {
     width: 100%; }
-    @media screen and (min-width: 64em) {
-      .section .section-header-image .header-image {
+    @media screen and (min-width: 68.75em) {
+      .section-header-image .header-image {
         width: 100%;
         float: left;
         padding-left: 0.625rem;
         padding-right: 0.625rem; } }
-  @media screen and (min-width: 64em) and (min-width: 40em) {
-    .section .section-header-image .header-image {
+  @media screen and (min-width: 68.75em) and (min-width: 40em) {
+    .section-header-image .header-image {
       padding-left: 0.9375rem;
       padding-right: 0.9375rem; } }
-    @media screen and (min-width: 64em) {
-        .section .section-header-image .header-image:last-child:not(:first-child) {
+    @media screen and (min-width: 68.75em) {
+        .section-header-image .header-image:last-child:not(:first-child) {
           float: right; } }
+  .section-half-copy {
+    width: 83.33333%;
+    float: left;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4.375rem 0; }
+    @media screen and (min-width: 40em) {
+      .section-half-copy {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
+    .section-half-copy:last-child:not(:first-child) {
+      float: right; }
+    @media screen and (min-width: 40em) {
+      .section-half-copy {
+        width: 66.66667%;
+        float: left;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        float: none;
+        margin-left: auto;
+        margin-right: auto; } }
+  @media screen and (min-width: 40em) and (min-width: 40em) {
+    .section-half-copy {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+    @media screen and (min-width: 40em) {
+        .section-half-copy:last-child:not(:first-child) {
+          float: right; } }
+    @media screen and (min-width: 68.75em) {
+      .section-half-copy {
+        width: 50%;
+        float: left;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        float: none;
+        margin-left: auto;
+        margin-right: auto; } }
+  @media screen and (min-width: 68.75em) and (min-width: 40em) {
+    .section-half-copy {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+    @media screen and (min-width: 68.75em) {
+        .section-half-copy:last-child:not(:first-child) {
+          float: right; } }
+    @media screen and (min-width: 68.75em) {
+      .section-half-copy {
+        width: 33.33333%;
+        float: left;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        margin-left: 8.33333%;
+        padding: 8.75rem 0; } }
+  @media screen and (min-width: 68.75em) and (min-width: 40em) {
+    .section-half-copy {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+    @media screen and (min-width: 68.75em) {
+        .section-half-copy:last-child:not(:first-child) {
+          float: right; } }
+  .section-copy {
+    width: 83.33333%;
+    float: left;
+    padding-left: 0.625rem;
+    padding-right: 0.625rem;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4.375rem 0; }
+    @media screen and (min-width: 40em) {
+      .section-copy {
+        padding-left: 0.9375rem;
+        padding-right: 0.9375rem; } }
+    .section-copy:last-child:not(:first-child) {
+      float: right; }
+    @media screen and (min-width: 40em) {
+      .section-copy {
+        width: 66.66667%;
+        float: left;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        float: none;
+        margin-left: auto;
+        margin-right: auto; } }
+  @media screen and (min-width: 40em) and (min-width: 40em) {
+    .section-copy {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+    @media screen and (min-width: 40em) {
+        .section-copy:last-child:not(:first-child) {
+          float: right; } }
+    @media screen and (min-width: 68.75em) {
+      .section-copy {
+        width: 50%;
+        float: left;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        float: none;
+        margin-left: auto;
+        margin-right: auto; } }
+  @media screen and (min-width: 68.75em) and (min-width: 40em) {
+    .section-copy {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+    @media screen and (min-width: 68.75em) {
+        .section-copy:last-child:not(:first-child) {
+          float: right; } }
+  .section-half-block {
+    padding: 0 1rem 3.5rem; }
+    @media screen and (min-width: 40em) {
+      .section-half-block {
+        width: 83.33333%;
+        float: left;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        margin-left: 8.33333%; } }
+  @media screen and (min-width: 40em) and (min-width: 40em) {
+    .section-half-block {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+    @media screen and (min-width: 40em) {
+        .section-half-block:last-child:not(:first-child) {
+          float: right; }
+        .section-half-block:last-child:last-child {
+          float: left; } }
+    @media screen and (min-width: 68.75em) {
+      .section-half-block {
+        width: 41.66667%;
+        float: left;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        margin-left: 8.33333%;
+        padding: 6.25rem 0; } }
+  @media screen and (min-width: 68.75em) and (min-width: 40em) {
+    .section-half-block {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+    @media screen and (min-width: 68.75em) {
+        .section-half-block:last-child:not(:first-child) {
+          float: right; }
+        .section-half-block:last-child:last-child {
+          float: left; } }
+  .section-image-block {
+    width: 100%;
+    float: left; }
+    .section-image-block:last-child:not(:first-child) {
+      float: right; }
+    @media screen and (min-width: 40em) {
+      .section-image-block {
+        width: 50%;
+        float: left; }
+        .section-image-block:last-child:not(:first-child) {
+          float: right; } }
+  @media screen and (min-width: 68.75em) {
+    .section-start {
+      padding-top: 6.25rem; } }
+  @media screen and (min-width: 68.75em) {
+    .section-end {
+      padding-bottom: 6.25rem; } }
   .section .work-copy {
     width: 83.33333%;
     float: left;
@@ -645,7 +824,7 @@ textarea {
     float: none;
     margin-left: auto;
     margin-right: auto;
-    padding: 3.5rem 0; }
+    padding: 4.375rem 0; }
     @media screen and (min-width: 40em) {
       .section .work-copy {
         padding-left: 0.9375rem;
@@ -654,7 +833,7 @@ textarea {
       float: right; }
     @media screen and (min-width: 40em) {
       .section .work-copy {
-        width: 41.66667%;
+        width: 66.66667%;
         float: left;
         padding-left: 0.625rem;
         padding-right: 0.625rem;
@@ -668,8 +847,27 @@ textarea {
     @media screen and (min-width: 40em) {
         .section .work-copy:last-child:not(:first-child) {
           float: right; } }
+    @media screen and (min-width: 68.75em) {
+      .section .work-copy {
+        width: 50%;
+        float: left;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        float: none;
+        margin-left: auto;
+        margin-right: auto; } }
+  @media screen and (min-width: 68.75em) and (min-width: 40em) {
+    .section .work-copy {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+    @media screen and (min-width: 68.75em) {
+        .section .work-copy:last-child:not(:first-child) {
+          float: right; } }
   .section .work-image img {
     width: 100%; }
+
+.image-thumbs {
+  width: 100%; }
 
 .gray {
   background-color: #F2F2F2;
@@ -689,7 +887,7 @@ textarea {
   @media screen and (min-width: 40em) {
       .gray .work-copy:last-child:not(:first-child) {
         float: right; } }
-  @media screen and (min-width: 40em) and (min-width: 64em) {
+  @media screen and (min-width: 40em) and (min-width: 68.75em) {
     .gray .work-copy {
       width: 25%;
       float: left;
@@ -697,11 +895,11 @@ textarea {
       padding-right: 0.625rem;
       margin-left: 8.33333%;
       padding: 12.5rem 0; } }
-  @media screen and (min-width: 40em) and (min-width: 64em) and (min-width: 40em) {
+  @media screen and (min-width: 40em) and (min-width: 68.75em) and (min-width: 40em) {
     .gray .work-copy {
       padding-left: 0.9375rem;
       padding-right: 0.9375rem; } }
-  @media screen and (min-width: 40em) and (min-width: 64em) {
+  @media screen and (min-width: 40em) and (min-width: 68.75em) {
       .gray .work-copy:last-child:not(:first-child) {
         float: right; } }
   @media screen and (min-width: 40em) {
@@ -710,121 +908,25 @@ textarea {
       float: left; }
       .gray .work-image:last-child:not(:first-child) {
         float: right; } }
-  @media screen and (min-width: 40em) and (min-width: 64em) {
+  @media screen and (min-width: 40em) and (min-width: 68.75em) {
     .gray .work-image {
       width: 50%;
       float: left;
       padding-left: 0.625rem;
       padding-right: 0.625rem; } }
-  @media screen and (min-width: 40em) and (min-width: 64em) and (min-width: 40em) {
+  @media screen and (min-width: 40em) and (min-width: 68.75em) and (min-width: 40em) {
     .gray .work-image {
       padding-left: 0.9375rem;
       padding-right: 0.9375rem; } }
-  @media screen and (min-width: 40em) and (min-width: 64em) {
+  @media screen and (min-width: 40em) and (min-width: 68.75em) {
       .gray .work-image:last-child:not(:first-child) {
         float: right; } }
 
-.about-copy {
-  width: 83.33333%;
-  float: left;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-  float: none;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 3.5rem 0; }
-  @media screen and (min-width: 40em) {
-    .about-copy {
-      padding-left: 0.9375rem;
-      padding-right: 0.9375rem; } }
-  .about-copy:last-child:not(:first-child) {
-    float: right; }
-  @media screen and (min-width: 40em) {
-    .about-copy {
-      width: 41.66667%;
-      float: left;
-      padding-left: 0.625rem;
-      padding-right: 0.625rem;
-      float: none;
-      margin-left: auto;
-      margin-right: auto; } }
-  @media screen and (min-width: 40em) and (min-width: 40em) {
-    .about-copy {
-      padding-left: 0.9375rem;
-      padding-right: 0.9375rem; } }
-  @media screen and (min-width: 40em) {
-      .about-copy:last-child:not(:first-child) {
-        float: right; } }
-  @media screen and (min-width: 64em) {
-    .about-copy {
-      width: 33.33333%;
-      float: left;
-      padding-left: 0.625rem;
-      padding-right: 0.625rem;
-      margin-left: 8.33333%;
-      padding: 8.75rem 0; } }
-  @media screen and (min-width: 64em) and (min-width: 40em) {
-    .about-copy {
-      padding-left: 0.9375rem;
-      padding-right: 0.9375rem; } }
-  @media screen and (min-width: 64em) {
-      .about-copy:last-child:not(:first-child) {
-        float: right; } }
-
-.about-contact {
-  padding: 0 1rem 3.5rem; }
-  @media screen and (min-width: 64em) {
-    .about-contact {
-      width: 50%;
-      float: left;
-      padding-left: 0.625rem;
-      padding-right: 0.625rem;
-      padding: 6.25rem 0; } }
-  @media screen and (min-width: 64em) and (min-width: 40em) {
-    .about-contact {
-      padding-left: 0.9375rem;
-      padding-right: 0.9375rem; } }
-  @media screen and (min-width: 64em) {
-      .about-contact:last-child:not(:first-child) {
-        float: right; } }
-
-.recent-copy {
-  width: 83.33333%;
-  float: left;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-  float: none;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 3.5rem 0; }
-  @media screen and (min-width: 40em) {
-    .recent-copy {
-      padding-left: 0.9375rem;
-      padding-right: 0.9375rem; } }
-  .recent-copy:last-child:not(:first-child) {
-    float: right; }
-  @media screen and (min-width: 40em) {
-    .recent-copy {
-      width: 41.66667%;
-      float: left;
-      padding-left: 0.625rem;
-      padding-right: 0.625rem;
-      float: none;
-      margin-left: auto;
-      margin-right: auto; } }
-  @media screen and (min-width: 40em) and (min-width: 40em) {
-    .recent-copy {
-      padding-left: 0.9375rem;
-      padding-right: 0.9375rem; } }
-  @media screen and (min-width: 40em) {
-      .recent-copy:last-child:not(:first-child) {
-        float: right; } }
-
-#work-grid .work-content {
+#work-gallery .work-content {
   max-width: 75rem;
   margin-left: auto;
   margin-right: auto; }
-  #work-grid .work-content::before, #work-grid .work-content::after {
+  #work-gallery .work-content::before, #work-gallery .work-content::after {
     content: ' ';
     display: table;
     -webkit-flex-basis: 0;
@@ -833,28 +935,23 @@ textarea {
     -webkit-order: 1;
         -ms-flex-order: 1;
             order: 1; }
-  #work-grid .work-content::after {
+  #work-gallery .work-content::after {
     clear: both; }
-  @media screen and (min-width: 64em) {
-    #work-grid .work-content {
-      padding: 5rem 0; } }
 
-#work-grid .work-item {
+#work-gallery .work-item {
   margin: 0;
   display: none; }
-  #work-grid .work-item img {
-    width: 100%; }
   @media screen and (min-width: 40em) {
-    #work-grid .work-item {
+    #work-gallery .work-item {
       width: 50%;
       float: left; }
-      #work-grid .work-item:last-child:not(:first-child) {
+      #work-gallery .work-item:last-child:not(:first-child) {
         float: right; } }
-  @media screen and (min-width: 64em) {
-    #work-grid .work-item {
+  @media screen and (min-width: 68.75em) {
+    #work-gallery .work-item {
       width: 33.33333%;
       float: left; }
-      #work-grid .work-item:last-child:not(:first-child) {
+      #work-gallery .work-item:last-child:not(:first-child) {
         float: right; } }
-  #work-grid .work-item a:hover {
+  #work-gallery .work-item a:hover {
     opacity: 0.6; }
