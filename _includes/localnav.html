@@ -1,14 +1,14 @@
 {% assign project = site.data.projects %}
 {% assign next = "#" %} {% assign prev = "#" %}
-{% assign next_p = page.order | plus: 1 %} {% assign prev_p = page.order | minus: 1 %}
-{% if next_p > project.size %}
-  {% assign next_p = 1 %}
+{% assign next_p = page.order | minus: 1 %} {% assign prev_p = page.order | plus: 1 %}
+{% if next_p <= 0 %}
+  {% assign next_p = project.size  %}
   {% assign next = project[next_p].url %}
 {% else %}
   {% assign next = project[next_p].url %}
 {% endif %}
-{% if prev_p <= 0 %}
-  {% assign prev_p = project.size %}
+{% if prev_p > project.size %}
+  {% assign prev_p = 1 %}
   {% assign prev = project[prev_p].url %}
 {% else %}
   {% assign prev = project[prev_p].url %}
