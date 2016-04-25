@@ -405,8 +405,9 @@ textarea {
     height: 3rem; }
   @media screen and (min-width: 40em) {
     #jc-globalnav .jc-gn-about, #jc-globalnav .jc-gn-work {
-      margin-left: 1rem;
-      display: inline; } }
+      display: inline;
+      width: 3.75rem;
+      margin-left: 1rem; } }
   #jc-globalnav .jc-gn-list {
     background-color: #292929;
     position: absolute;
@@ -421,7 +422,7 @@ textarea {
         width: auto;
         text-align: right;
         height: 3rem;
-        width: 41.66667%;
+        width: 50%;
         float: left; }
         #jc-globalnav .jc-gn-list:last-child:not(:first-child) {
           float: right; } }
@@ -503,7 +504,7 @@ textarea {
     margin: 0 1rem; }
     @media screen and (min-width: 40em) {
       #jc-localnav .jc-ln-list {
-        width: 41.66667%;
+        width: 50%;
         float: left;
         padding-left: 0.625rem;
         padding-right: 0.625rem;
@@ -515,6 +516,22 @@ textarea {
       padding-left: 0.9375rem;
       padding-right: 0.9375rem; } }
     @media screen and (min-width: 40em) {
+        #jc-localnav .jc-ln-list:last-child:not(:first-child) {
+          float: right; } }
+    @media screen and (min-width: 68.75em) {
+      #jc-localnav .jc-ln-list {
+        width: 41.66667%;
+        float: left;
+        padding-left: 0.625rem;
+        padding-right: 0.625rem;
+        float: none;
+        margin-left: auto;
+        margin-right: auto; } }
+  @media screen and (min-width: 68.75em) and (min-width: 40em) {
+    #jc-localnav .jc-ln-list {
+      padding-left: 0.9375rem;
+      padding-right: 0.9375rem; } }
+    @media screen and (min-width: 68.75em) {
         #jc-localnav .jc-ln-list:last-child:not(:first-child) {
           float: right; } }
   #jc-localnav .jc-ln-item,

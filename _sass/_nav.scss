@@ -46,8 +46,9 @@
       @extend .jc-gn-james;
 
       @include breakpoint(medium) {
-        margin-left: rem-calc(16);
         display: inline;
+        width: rem-calc(60);
+        margin-left: rem-calc(16);
       }
     }
     &-list {
@@ -65,7 +66,7 @@
         text-align: right;
         height: rem-calc(48);
 
-        @include grid-column(5,0);
+        @include grid-column(6,0);
       }
     }
     &-menuicon {
@@ -144,6 +145,11 @@
       margin: 0 1rem;
 
       @include breakpoint(medium) {
+        @include grid-column(6);
+        @include grid-column-position(center);
+      }
+
+      @include breakpoint(large) {
         @include grid-column(5);
         @include grid-column-position(center);
       }
