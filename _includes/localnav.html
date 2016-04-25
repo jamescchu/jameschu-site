@@ -1,13 +1,36 @@
+{% assign project = site.data.projects %}
+{% assign next = "#" %} {% assign prev = "#" %}
+{% assign next_p = page.order | plus: 1 %} {% assign prev_p = page.order | minus: 1 %}
+{% if next_p > project.size %}
+  {% assign next_p = 1 %}
+  {% assign next = project[next_p].url %}
+{% else %}
+  {% assign next = project[next_p].url %}
+{% endif %}
+{% if prev_p <= 0 %}
+  {% assign prev_p = project.size %}
+  {% assign prev = project[prev_p].url %}
+{% else %}
+  {% assign prev = project[prev_p].url %}
+{% endif %}
 <nav id="jc-localnav">
   <div class="jc-ln-content">
     <ul class="jc-ln-list">
-        {% for item in site.data.work_items %}
-          <li class="jc-ln-item">
-            <a href="#" class="subnav-btn" data-filter="{{ item.filter }}">
-              <span class="jc-ln-text">{{ item.cat }}</span>
-            </a>
-          </li>
-        {% endfor %}
+      <li class="jc-ln-item">
+        <a href="{{ relurl }}{{ prev }}">
+          <span class="jc-ln-text">Prev</span>
+        </a>
+      </li>
+      <li class="jc-ln-item">
+        <a href="{{ relurl }}work/">
+          <span class="jc-ln-text">Show All</span>
+        </a>
+      </li>
+      <li class="jc-ln-item">
+        <a href="{{ relurl }}{{ next }}">
+          <span class="jc-ln-text">Next</span>
+        </a>
+      </li>
     </ul>
   </div>
 </nav>

@@ -21,8 +21,8 @@
     </ul>
     <ul class="jc-gn-list">
       {% for item in site.data.nav_items %}
-        <li class="jc-gn-item jc-gn-{{ item.slug}}"><a href="{{ relurl }}{{ item.slug }}">
-          <svg class="{{ item.svg }} jc-gn-{{ item.slug}}">
+        <li class="jc-gn-item jc-gn-{{ item.slug }}"><a href="{{ relurl }}{{ item.slug }}">
+          <svg class="{{ item.svg }} jc-gn-{{ item.slug }}">
             <use xlink:href="#{{ item.svg }}"></use>
           </svg></a>
         </li>
