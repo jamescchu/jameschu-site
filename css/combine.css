@@ -340,7 +340,8 @@ textarea {
     #jc-globalnav {
       max-width: 75rem;
       margin-left: auto;
-      margin-right: auto; }
+      margin-right: auto;
+      height: 2.75rem; }
       #jc-globalnav::before, #jc-globalnav::after {
         content: ' ';
         display: table;
@@ -400,12 +401,14 @@ textarea {
     width: 100%; }
     @media screen and (min-width: 40em) {
       #jc-globalnav .jc-gn-james, #jc-globalnav .jc-gn-about, #jc-globalnav .jc-gn-work {
+        height: 2.75rem;
         width: 6.25rem; } }
   #jc-globalnav .jc-gn-item {
     height: 3rem; }
   @media screen and (min-width: 40em) {
     #jc-globalnav .jc-gn-about, #jc-globalnav .jc-gn-work {
       display: inline;
+      height: 2.75rem;
       width: 3.75rem;
       margin-left: 1rem; } }
   #jc-globalnav .jc-gn-list {
@@ -421,7 +424,7 @@ textarea {
         position: static;
         width: auto;
         text-align: right;
-        height: 3rem;
+        height: 2.75rem;
         width: 50%;
         float: left; }
         #jc-globalnav .jc-gn-list:last-child:not(:first-child) {
@@ -451,7 +454,7 @@ textarea {
     top: 1.25rem; }
   #jc-globalnav .jc-gn-bread-btm {
     bottom: 1.25rem; }
-  #jc-globalnav .jc-gn label[for="&-menustate"] {
+  #jc-globalnav .jc-gn label[for=" &-menustate"] {
     position: absolute;
     top: 0;
     right: 0;
@@ -461,7 +464,7 @@ textarea {
     height: 3rem;
     cursor: pointer; }
     @media screen and (min-width: 40em) {
-      #jc-globalnav .jc-gn label[for="&-menustate"] {
+      #jc-globalnav .jc-gn label[for=" &-menustate"] {
         display: none;
         clip: rect(0, 0, 0, 0); } }
 
@@ -534,9 +537,9 @@ textarea {
     @media screen and (min-width: 68.75em) {
         #jc-localnav .jc-ln-list:last-child:not(:first-child) {
           float: right; } }
-  #jc-localnav .jc-ln-item,
+  #jc-localnav .jc-ln-item, #jc-localnav .jc-ln-text,
   #jc-localnav .jc-ln a:link,
-  #jc-localnav .jc-ln a:visited, #jc-localnav .jc-ln-text {
+  #jc-localnav .jc-ln a:visited {
     font-size: 1rem;
     text-transform: lowercase;
     color: #4A4A4A;
@@ -545,17 +548,17 @@ textarea {
     width: auto;
     display: inline-block; }
     @media screen and (min-width: 40em) {
-      #jc-localnav .jc-ln-item,
+      #jc-localnav .jc-ln-item, #jc-localnav .jc-ln-text,
       #jc-localnav .jc-ln a:link,
-      #jc-localnav .jc-ln a:visited, #jc-localnav .jc-ln-text {
+      #jc-localnav .jc-ln a:visited {
         font-size: 1.125rem; } }
-    #jc-localnav .jc-ln-item a:hover,
     #jc-localnav .jc-ln-item a:active,
-    #jc-localnav .jc-ln a:link a:hover,
+    #jc-localnav .jc-ln-item a:hover, #jc-localnav .jc-ln-text a:active,
+    #jc-localnav .jc-ln-text a:hover,
     #jc-localnav .jc-ln a:link a:active,
-    #jc-localnav .jc-ln a:visited a:hover,
-    #jc-localnav .jc-ln a:visited a:active, #jc-localnav .jc-ln-text a:hover,
-    #jc-localnav .jc-ln-text a:active {
+    #jc-localnav .jc-ln a:link a:hover,
+    #jc-localnav .jc-ln a:visited a:active,
+    #jc-localnav .jc-ln a:visited a:hover {
       opacity: 0.6; }
   #jc-localnav .jc-ln-list::after {
     content: '';

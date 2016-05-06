@@ -1,35 +1,29 @@
 @mixin copy-layout-half {
-  @include grid-column(10);
+   @include grid-column(10);
   @include grid-column-position(center);
   padding: rem-calc(70) 0;
-
   @include breakpoint(medium) {
-    @include grid-column(8);
+     @include grid-column(8);
     @include grid-column-position(center);
   }
-
   @include breakpoint(large) {
-    @include grid-column(6);
+     @include grid-column(6);
     @include grid-column-position(center);
   }
 }
-
 @mixin copy-layout-full {
-  @include grid-column(10);
+   @include grid-column(10);
   @include grid-column-position(center);
   padding: rem-calc(70) 0;
-
   @include breakpoint(medium) {
-    @include grid-column(8);
+     @include grid-column(8);
     @include grid-column-position(center);
   }
-
   @include breakpoint(large) {
-    @include grid-column(6);
+     @include grid-column(6);
     @include grid-column-position(center);
   }
 }
-
 .page-wrapper {
   background-color: $black;
   position: relative;
@@ -40,11 +34,9 @@
   transition: top 0.2s;
   min-height: 8rem;
 }
-
 .page-content {
   background-color: $white;
 }
-
 .main-footer {
   background-color: $black;
   height: 2rem;
@@ -52,7 +44,6 @@
     padding: 0.4rem 0;
   }
 }
-
 .hero-section {
   background-color: $light-gray;
   .hero-container {
@@ -62,7 +53,6 @@
     @include copy-layout-full;
   }
 }
-
 .section {
   background-color: $white;
   &-content {
@@ -74,17 +64,15 @@
     }
     .header-image {
       width: 100%;
-
       @include breakpoint(large) {
-        @include grid-column(12);
+         @include grid-column(12);
       }
     }
   }
   &-half-copy {
     @include copy-layout-half;
-
     @include breakpoint(large) {
-      @include grid-column(4);
+       @include grid-column(4);
       @include grid-column-offset(1);
       padding: rem-calc(140) 0;
     }
@@ -94,15 +82,13 @@
   }
   &-half-block {
     padding: 0 rem-calc(16) 3.5rem;
-
     @include breakpoint(medium) {
-      @include grid-column(10);
+       @include grid-column(10);
       @include grid-column-offset(1);
       @include grid-column-end;
     }
-
     @include breakpoint(large) {
-      @include grid-column(5);
+       @include grid-column(5);
       @include grid-column-offset(1);
       @include grid-column-end;
       padding: rem-calc(100) 0;
@@ -110,9 +96,8 @@
   }
   &-image-block {
     @include grid-column(12, 0);
-
     @include breakpoint(medium) {
-      @include grid-column(6, 0);
+       @include grid-column(6, 0);
     }
   }
   &-start {
@@ -134,22 +119,19 @@
     }
   }
 }
-
 .image-thumbs {
   width: 100%;
 }
-
 .gray {
   background-color: $light-gray;
   width: 100%;
   .work-copy {
     @include breakpoint(medium) {
-      @include grid-column(4);
+       @include grid-column(4);
       @include grid-column-offset(1);
       padding: rem-calc(100) 0;
-
       @include breakpoint(large) {
-        @include grid-column(3);
+         @include grid-column(3);
         @include grid-column-offset(1);
         padding: rem-calc(200) 0;
       }
@@ -157,15 +139,13 @@
   }
   .work-image {
     @include breakpoint(medium) {
-      @include grid-column(6,0);
-
+       @include grid-column(6,0);
       @include breakpoint(large) {
-        @include grid-column(6);
+         @include grid-column(6);
       }
     }
   }
 }
-
 #work-gallery {
   .work {
     &-content {
@@ -174,13 +154,11 @@
     &-item {
       margin: 0;
       display: none;
-
       @include breakpoint(medium) {
-        @include grid-column(6, 0);
+         @include grid-column(6, 0);
       }
-
       @include breakpoint(large) {
-        @include grid-column(4, 0);
+         @include grid-column(4, 0);
       }
       a:hover {
         opacity: 0.6;
