@@ -956,7 +956,8 @@ textarea {
 #work-gallery .work-content {
   max-width: 75rem;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  transition: height 0.5s ease; }
   #work-gallery .work-content::before, #work-gallery .work-content::after {
     content: ' ';
     display: table;
@@ -971,7 +972,10 @@ textarea {
 
 #work-gallery .work-item {
   margin: 0;
-  display: none; }
+  width: 100%;
+  float: left; }
+  #work-gallery .work-item:last-child:not(:first-child) {
+    float: right; }
   @media screen and (min-width: 40em) {
     #work-gallery .work-item {
       width: 50%;

@@ -150,10 +150,11 @@
   .work {
     &-content {
       @include grid-row;
+      transition: height 0.5s ease;
     }
     &-item {
       margin: 0;
-      display: none;
+      @include grid-column(12, 0);
       @include breakpoint(medium) {
          @include grid-column(6, 0);
       }
