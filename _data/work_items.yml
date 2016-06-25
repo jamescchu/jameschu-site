@@ -1,11 +1,11 @@
 - cat: All
-  filter: 
+  filter:
 
 - cat: Brand
   filter: .brand
 
 - cat: Typography
-  filter: .typography
+  filter: .type
 
 - cat: Interaction
-  filter: .interaction
+  filter: .ixd
