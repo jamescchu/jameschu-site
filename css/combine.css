@@ -537,7 +537,7 @@ textarea {
     @media screen and (min-width: 68.75em) {
         #jc-localnav .jc-ln-list:last-child:not(:first-child) {
           float: right; } }
-  #jc-localnav .jc-ln-item, #jc-localnav .jc-ln-text,
+  #jc-localnav .jc-ln-item, #jc-localnav .jc-ln-filter,
   #jc-localnav .jc-ln a:link,
   #jc-localnav .jc-ln a:visited {
     font-size: 1rem;
@@ -548,13 +548,13 @@ textarea {
     width: auto;
     display: inline-block; }
     @media screen and (min-width: 40em) {
-      #jc-localnav .jc-ln-item, #jc-localnav .jc-ln-text,
+      #jc-localnav .jc-ln-item, #jc-localnav .jc-ln-filter,
       #jc-localnav .jc-ln a:link,
       #jc-localnav .jc-ln a:visited {
         font-size: 1.125rem; } }
     #jc-localnav .jc-ln-item a:active,
-    #jc-localnav .jc-ln-item a:hover, #jc-localnav .jc-ln-text a:active,
-    #jc-localnav .jc-ln-text a:hover,
+    #jc-localnav .jc-ln-item a:hover, #jc-localnav .jc-ln-filter a:active,
+    #jc-localnav .jc-ln-filter a:hover,
     #jc-localnav .jc-ln a:link a:active,
     #jc-localnav .jc-ln a:link a:hover,
     #jc-localnav .jc-ln a:visited a:active,

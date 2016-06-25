@@ -143,8 +143,8 @@
         @include grid-column-position(center);
       }
     }
+    &-filter,
     &-item,
-    &-text,
     a:link,
     a:visited {
       font-size: rem-calc(16);
