@@ -1,6 +1,9 @@
+@import 'settings/settings';
+
+$root-background-color: $black;
+
 @import 'sanitize';
 // @import 'grid';
-@import 'settings/settings';
 @import 'foundation';
 @import 'type';
 @import 'nav';

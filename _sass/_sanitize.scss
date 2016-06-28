@@ -236,7 +236,6 @@ svg {
 }
 
 // specify the root styles of the document
-$root-background-color: #292929;
 
 :root {
   background-color: if(variable-exists(root-background-color), $root-background-color, #fff);
