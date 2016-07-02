@@ -143,11 +143,12 @@
         @include grid-column-position(center);
       }
     }
-    &-filter,
+    &-text,
     &-item,
     a:link,
     a:visited {
-      font-size: rem-calc(16);
+      font-weight: 100;
+      font-size: rem-calc(18);
       text-transform: lowercase;
       color: $primary-color;
       line-height: rem-calc(48);
@@ -155,7 +156,7 @@
       width: auto;
       display: inline-block;
       @include breakpoint(medium) {
-        font-size: rem-calc(18);
+        font-size: rem-calc(20);
       }
       a:active,
       a:hover {

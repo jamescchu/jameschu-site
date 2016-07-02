@@ -3,7 +3,7 @@
     <ul class="jc-ln-list">
         {% for item in site.data.work_items %}
           <li class="jc-ln-item">
-            <a href="#" class="jc-ln-filter{% if item.cat == 'All' %} active{% endif %}" data-filter="{{ item.filter }}">
+            <a href="#" class="jc-ln-text{% if item.cat == 'All' %} active{% endif %}" data-filter="{{ item.filter }}">
               {{ item.cat }}
             </a>
           </li>
