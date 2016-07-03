@@ -1,10 +1,10 @@
-@import 'settings/settings';
+@import 'framework/settings/settings';
 
 $root-background-color: $black;
 
-@import 'sanitize';
+@import 'vendor/sanitize';
 // @import 'grid';
-@import 'foundation';
+@import 'framework/foundation';
 @import 'type';
 @import 'nav';
 @import 'page';

@@ -1,4 +1,4 @@
-#jc-globalnav {
+#jc_globalnav {
   background-color: $black;
   height: rem-calc(48);
   user-select: none;
@@ -7,108 +7,108 @@
      @include grid-row;
     height: rem-calc(44);
   }
-  .jc-gn {
-    &-content {
-      @include breakpoint(medium) {
-         @include grid-column(10);
-        @include grid-column-position(center);
-      }
-      @include breakpoint(large) {
-         @include grid-column(12);
-        @include grid-column-position(center);
-      }
+}
+.jc-gn {
+  &-content {
+    @include breakpoint(medium) {
+       @include grid-column(10);
+      @include grid-column-position(center);
     }
-    &-header {
-      width: 100%;
-      height: rem-calc(48);
-      @include breakpoint(medium) {
-        width: auto;
-        @include grid-column(2,0);
-      }
+    @include breakpoint(large) {
+       @include grid-column(12);
+      @include grid-column-position(center);
     }
-    &-james {
-      fill: $light-gray;
-      height: rem-calc(48);
-      width: 100%;
-      @include breakpoint(medium) {
-        height: rem-calc(44);
-        width: rem-calc(100);
-      }
+  }
+  &-header {
+    width: 100%;
+    height: rem-calc(48);
+    @include breakpoint(medium) {
+      width: auto;
+      @include grid-column(2,0);
     }
-    &-item {
-      height: rem-calc(48);
+  }
+  &-james {
+    fill: $light-gray;
+    height: rem-calc(48);
+    width: 100%;
+    @include breakpoint(medium) {
+      height: rem-calc(44);
+      width: rem-calc(100);
     }
-    &-about,
-    &-work {
-      @extend .jc-gn-james;
-      @include breakpoint(medium) {
-        display: inline;
-        height: rem-calc(44);
-        width: rem-calc(60);
-        margin-left: rem-calc(16);
-      }
+  }
+  &-item {
+    height: rem-calc(48);
+  }
+  &-about,
+  &-work {
+    @extend .jc-gn-james;
+    @include breakpoint(medium) {
+      display: inline;
+      height: rem-calc(44);
+      width: rem-calc(60);
+      margin-left: rem-calc(16);
     }
-    &-list {
-      background-color: $black;
-      position: absolute;
-      top: rem-calc(48);
-      width: 100%;
-      height: rem-calc(100);
-      z-index: 0;
-      @include breakpoint(medium) {
-        background-color: transparent;
-        position: static;
-        width: auto;
-        text-align: right;
-        height: rem-calc(44);
-        @include grid-column(6,0);
-      }
+  }
+  &-list {
+    background-color: $black;
+    position: absolute;
+    top: rem-calc(48);
+    width: 100%;
+    height: rem-calc(100);
+    z-index: 0;
+    @include breakpoint(medium) {
+      background-color: transparent;
+      position: static;
+      width: auto;
+      text-align: right;
+      height: rem-calc(44);
+      @include grid-column(6,0);
     }
-    &-menuicon {
-      @include show-for-only(small);
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: rem-calc(48);
-      z-index: 5;
-    }
-    &-bread {
-      width: rem-calc(48);
-      height: rem-calc(48);
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    &-bun {
-      background: $white;
-      position: absolute;
-      width: 1.2rem;
-      height: 1px;
-      right: rem-calc(16);
-    }
-    &-bread-top {
-      top: 1.25rem;
-    }
-    &-bread-btm {
-      bottom: 1.25rem;
-    }
-    label[for=" &-menustate"] {
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 2;
-      margin-left: -1.5rem;
-      width: 3rem;
-      height: 3rem;
-      cursor: pointer;
-      @include breakpoint(medium) {
-        display: none;
-        clip: rect(0, 0, 0, 0);
-      }
+  }
+  &-menuicon {
+    @include show-for-only(small);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: rem-calc(48);
+    z-index: 5;
+  }
+  &-bread {
+    width: rem-calc(48);
+    height: rem-calc(48);
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  &-bun {
+    background: $white;
+    position: absolute;
+    width: 1.2rem;
+    height: 1px;
+    right: rem-calc(16);
+  }
+  &-bread-top {
+    top: 1.25rem;
+  }
+  &-bread-btm {
+    bottom: 1.25rem;
+  }
+  label[for=" &-menustate"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    margin-left: -1.5rem;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    @include breakpoint(medium) {
+      display: none;
+      clip: rect(0, 0, 0, 0);
     }
   }
 }
-#jc-gn-menustate {
+#jc_gn_menustate {
   position: absolute;
   display: none;
   clip: rect(0, 0, 0, 0);
@@ -119,56 +119,56 @@
     }
   }
 }
-#jc-localnav {
+#jc_localnav {
   height: rem-calc(48);
   background-color: $light-gray;
   border-bottom: 1px solid $medium-gray;
   user-select: none;
-  .jc-ln {
-    &-content {
-      @include breakpoint(medium) {
-         @include grid-row;
-      }
+}
+.jc-ln {
+  &-content {
+    @include breakpoint(medium) {
+       @include grid-row;
     }
-    &-list {
-      height: rem-calc(48);
-      text-align: justify;
-      margin: 0 1rem;
-      @include breakpoint(medium) {
-         @include grid-column(6);
-        @include grid-column-position(center);
-      }
-      @include breakpoint(large) {
-         @include grid-column(5);
-        @include grid-column-position(center);
-      }
+  }
+  &-list {
+    height: rem-calc(48);
+    text-align: justify;
+    margin: 0 1rem;
+    @include breakpoint(medium) {
+       @include grid-column(6);
+      @include grid-column-position(center);
     }
-    &-text,
-    &-item,
-    a:link,
-    a:visited {
-      font-weight: 100;
-      font-size: rem-calc(18);
-      text-transform: lowercase;
-      color: $primary-color;
-      line-height: rem-calc(48);
-      height: rem-calc(48);
-      width: auto;
-      display: inline-block;
-      @include breakpoint(medium) {
-        font-size: rem-calc(20);
-      }
-      a:active,
-      a:hover {
-        opacity: 0.6;
-      }
+    @include breakpoint(large) {
+       @include grid-column(5);
+      @include grid-column-position(center);
     }
-    &-list::after {
-      content: '';
-      width: 100%;
-      display: inline-block;
-      font-size: 0;
-      line-height: 0;
+  }
+  &-text,
+  &-item,
+  a:link,
+  a:visited {
+    font-weight: 100;
+    font-size: rem-calc(18);
+    text-transform: lowercase;
+    color: $primary-color;
+    line-height: rem-calc(48);
+    height: rem-calc(48);
+    width: auto;
+    display: inline-block;
+    @include breakpoint(medium) {
+      font-size: rem-calc(20);
     }
+    a:active,
+    a:hover {
+      opacity: 0.6;
+    }
+  }
+  &-list::after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
   }
 }
