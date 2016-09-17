@@ -1,7 +1,8 @@
 # James v2
 
 Personal portfolio site for James Chu.
-Work in progress link: dev.james-chu.com
+
+Work in progress link: http://dev.james-chu.com
 
 ### Tech
 
