@@ -11,4 +11,4 @@ exclude: [node_modules, gulpfile.js, package.json, CNAME]
 include: [images, _work, _work/images]
 
 # Build settings
-markdown: kramdown
+#markdown: kramdown

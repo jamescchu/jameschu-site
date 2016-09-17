@@ -139,7 +139,7 @@ gulp.task('watch', function() {
     gulp.watch('_svg/*.svg', ['svgstore']);
     gulp.watch('_sass/*.scss', ['sass']);
     gulp.watch('js/*.js', ['js']);
-    gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*', '_work/*.html'], ['jekyll-rebuild']);
+    gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_posts/*', '_work/*'], ['jekyll-rebuild']);
 });
 
 /**

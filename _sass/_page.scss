@@ -20,7 +20,7 @@
     @include grid-column-position(center);
   }
   @include breakpoint(large) {
-     @include grid-column(6);
+     @include grid-column(4);
     @include grid-column-position(center);
   }
 }
@@ -53,6 +53,18 @@
     @include copy-layout-full;
   }
 }
+
+.work-content {
+  background-color: $white;
+  @include grid-row;
+}
+
+.work-row {
+  padding-top: rem-calc(50);
+  @include grid-column(8,0);
+  @include grid-column-position(center);
+}
+
 .section {
   background-color: $white;
   &-content {
@@ -79,6 +91,7 @@
   }
   &-copy {
     @include copy-layout-full;
+    text-align: left;
   }
   &-half-block {
     padding: 0 rem-calc(16) 3.5rem;

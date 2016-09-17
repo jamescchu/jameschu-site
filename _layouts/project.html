@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}" data-placeholder-focus="false">
+  {% include head.html %}
+  <body>
+      {% include globalnav.html %}
+      <div class="page-wrapper">
+        <div class="page-content">
+          {% include localnav.html %}
+          <div class="section">
+            <div class="section-copy">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+        {% include footer.html %}
+      </div>
+      {% include scripts.html %}
+  </body>
+</html>

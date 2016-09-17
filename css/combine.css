@@ -662,7 +662,7 @@ textarea {
           float: right; } }
     @media screen and (min-width: 68.75em) {
       .hero-section .hero-copy {
-        width: 50%;
+        width: 33.33333%;
         float: left;
         padding-left: 0.625rem;
         padding-right: 0.625rem;
@@ -676,6 +676,33 @@ textarea {
     @media screen and (min-width: 68.75em) {
         .hero-section .hero-copy:last-child:not(:first-child) {
           float: right; } }
+
+.work-content {
+  background-color: #fefefe;
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto; }
+  .work-content::before, .work-content::after {
+    content: ' ';
+    display: table;
+    -webkit-flex-basis: 0;
+        -ms-flex-preferred-size: 0;
+            flex-basis: 0;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1; }
+  .work-content::after {
+    clear: both; }
+
+.work-row {
+  padding-top: 3.125rem;
+  width: 66.66667%;
+  float: left;
+  float: none;
+  margin-left: auto;
+  margin-right: auto; }
+  .work-row:last-child:not(:first-child) {
+    float: right; }
 
 .section {
   background-color: #fefefe; }
@@ -782,7 +809,8 @@ textarea {
     float: none;
     margin-left: auto;
     margin-right: auto;
-    padding: 4.375rem 0; }
+    padding: 4.375rem 0;
+    text-align: left; }
     @media screen and (min-width: 40em) {
       .section-copy {
         padding-left: 0.9375rem;
@@ -807,7 +835,7 @@ textarea {
           float: right; } }
     @media screen and (min-width: 68.75em) {
       .section-copy {
-        width: 50%;
+        width: 33.33333%;
         float: left;
         padding-left: 0.625rem;
         padding-right: 0.625rem;
