@@ -93,11 +93,11 @@
   &-bread-btm {
     bottom: 1.25rem;
   }
-  label[for=" &-menustate"] {
+  label[for=" &_menustate"] {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 2;
+    z-index: 5;
     margin-left: -1.5rem;
     width: 3rem;
     height: 3rem;

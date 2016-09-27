@@ -475,17 +475,17 @@ textarea {
 .jc-gn-bread-btm {
   bottom: 1.25rem; }
 
-.jc-gn label[for=" &-menustate"] {
+.jc-gn label[for=" &_menustate"] {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 2;
+  z-index: 5;
   margin-left: -1.5rem;
   width: 3rem;
   height: 3rem;
   cursor: pointer; }
   @media screen and (min-width: 40em) {
-    .jc-gn label[for=" &-menustate"] {
+    .jc-gn label[for=" &_menustate"] {
       display: none;
       clip: rect(0, 0, 0, 0); } }
 
