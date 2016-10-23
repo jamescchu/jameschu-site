@@ -4,6 +4,8 @@ Personal portfolio site for James Chu.
 
 Work in progress link: http://dev.james-chu.com
 
+This project is no longer in active development and is reserved for reference and/or educational purposes.
+
 ### Tech
 
 The site uses a number of open source projects to function properly:
